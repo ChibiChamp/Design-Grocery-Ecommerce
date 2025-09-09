@@ -5,50 +5,983 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="HomePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Design Grocery Ecommerce</title>
 </head>
 
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="header-bar container">
-            <a href="#" class="header-logo"><img src="./assets/logo.png" alt="Logo">
-                <span>grocerymart</span></a>
+        <input type="checkbox" id="toggle-menu" hidden />
+        <div class="header-container">
+            <div class="header-left">
+                <button class="mobile-menu-btn">
+                    <label for="toggle-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </button>
+                <a href="#" class="header-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <span>grocerymart</span>
+                </a>
+            </div>
+
+            <div class="header-center">
+                <nav class="nav" id="mobile-menu">
+                    <div class="mobile-menu-content">
+                        <!-- Card & Favorite -->
+                        <div class="mobile-menu-item-container">
+                            <div class="mobile-menu-item">
+                                <div class="menu-item-left">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>Card</span>
+                                </div>
+                                <div class="menu-item-right">
+                                    <span class="badge">3</span>
+                                </div>
+                            </div>
+                            <div class="mobile-menu-item">
+                                <div class="menu-item-left">
+                                    <i class="far fa-heart"></i>
+                                    <span>Favorite</span>
+                                </div>
+                                <div class="menu-item-right">
+                                    <span class="badge">3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="nav-list">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link" onclick="toggleDropdown(event)">Departments <i
+                                        class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu mega-menu">
+                                    <div class="mega-menu-content">
+                                        <!-- Column 1: Grocery -->
+                                        <div class="mega-column">
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-shopping-cart" style="color: #8e44ad;"></i>
+                                                    Grocery
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Shop All</a></li>
+                                                    <li><a href="#" class="mega-item">Grilling Foods</a></li>
+                                                    <li><a href="#" class="mega-item">Spring Flavors</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-leaf" style="color: #27ae60;"></i>
+                                                    Fresh Produce
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Shop All</a></li>
+                                                    <li><a href="#" class="mega-item">Celebrate Salad Month</a></li>
+                                                    <li><a href="#" class="mega-item">Healthy Living</a></li>
+                                                    <li><a href="#" class="mega-item">Fresh Flowers</a></li>
+                                                    <li><a href="#" class="mega-item">Chilled Dressing</a></li>
+                                                    <li><a href="#" class="mega-item">Fresh Fruit</a></li>
+                                                    <li><a href="#" class="mega-item">Salad Kits & Bowls</a></li>
+                                                    <li><a href="#" class="mega-item">Organic Produce</a></li>
+                                                    <li><a href="#" class="mega-item">Fresh Vegetables</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- Column 2: Bakery & Bread -->
+                                        <div class="mega-column">
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-bread-slice" style="color: #3498db;"></i>
+                                                    Bakery & Bread
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Shop All</a></li>
+                                                    <li><a href="#" class="mega-item">New in Bakery</a></li>
+                                                    <li><a href="#" class="mega-item">Sliced Bread</a></li>
+                                                    <li><a href="#" class="mega-item">Rolls & Buns</a></li>
+                                                    <li><a href="#" class="mega-item">Tortillas</a></li>
+                                                    <li><a href="#" class="mega-item">Breakfast Breads</a></li>
+                                                    <li><a href="#" class="mega-item">Pies</a></li>
+                                                    <li><a href="#" class="mega-item">Cookies & Brownies</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-snowflake" style="color: #f39c12;"></i>
+                                                    Frozen
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Frozen Breakfast</a></li>
+                                                    <li><a href="#" class="mega-item">Frozen Potatoes</a></li>
+                                                    <li><a href="#" class="mega-item">Frozen Meals & Snacks</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- Column 3: Snacks -->
+                                        <div class="mega-column">
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-cookie-bite" style="color: #9b59b6;"></i>
+                                                    Snacks
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Shop All</a></li>
+                                                    <li><a href="#" class="mega-item">Chips</a></li>
+                                                    <li><a href="#" class="mega-item">Popcorn & Pretzels</a></li>
+                                                    <li><a href="#" class="mega-item">Crackers</a></li>
+                                                    <li><a href="#" class="mega-item">Salsa & Dips</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-candy-cane" style="color: #e74c3c;"></i>
+                                                    Candy
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Shop All</a></li>
+                                                    <li><a href="#" class="mega-item">Better for You</a></li>
+                                                    <li><a href="#" class="mega-item">Chocolate</a></li>
+                                                    <li><a href="#" class="mega-item">Sugar Free Candy</a></li>
+                                                    <li><a href="#" class="mega-item">Gum</a></li>
+                                                    <li><a href="#" class="mega-item">Mints</a></li>
+                                                    <li><a href="#" class="mega-item">On-the-Go</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- Column 4: Cocktails & Mixes Coffee -->
+                                        <div class="mega-column">
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-cocktail" style="color: #e91e63;"></i>
+                                                    Cocktails & Mixes Coffee
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Ground Coffee</a></li>
+                                                    <li><a href="#" class="mega-item">Whole Bean Coffee</a></li>
+                                                    <li><a href="#" class="mega-item">Coffee Pods</a></li>
+                                                    <li><a href="#" class="mega-item">Instant Coffee</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-coffee" style="color: #2ecc71;"></i>
+                                                    Beverages
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Shop All</a></li>
+                                                    <li><a href="#" class="mega-item">Water</a></li>
+                                                    <li><a href="#" class="mega-item">Soft Drinks</a></li>
+                                                    <li><a href="#" class="mega-item">Fruit Juice</a></li>
+                                                    <li><a href="#" class="mega-item">Sports Drinks</a></li>
+                                                    <li><a href="#" class="mega-item">Energy Drinks</a></li>
+                                                    <li><a href="#" class="mega-item">Tea</a></li>
+                                                    <li><a href="#" class="mega-item">Hot Chocolate & Cocoa</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link" onclick="toggleDropdown(event)">Grocery <i
+                                        class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu mega-menu grocery-menu">
+                                    <div class="mega-menu-content">
+                                        <!-- Column 1: Grocery -->
+                                        <div class="mega-column">
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-shopping-cart" style="color: #8e44ad;"></i>
+                                                    Grocery
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Shop All</a></li>
+                                                    <li><a href="#" class="mega-item">Grilling Foods</a></li>
+                                                    <li><a href="#" class="mega-item">Spring Flavors</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-leaf" style="color: #27ae60;"></i>
+                                                    Fresh Produce
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Shop All</a></li>
+                                                    <li><a href="#" class="mega-item">Celebrate Salad Month</a></li>
+                                                    <li><a href="#" class="mega-item">Healthy Living</a></li>
+                                                    <li><a href="#" class="mega-item">Fresh Flowers</a></li>
+                                                    <li><a href="#" class="mega-item">Chilled Dressing</a></li>
+                                                    <li><a href="#" class="mega-item">Fresh Fruit</a></li>
+                                                    <li><a href="#" class="mega-item">Salad Kits & Bowls</a></li>
+                                                    <li><a href="#" class="mega-item">Organic Produce</a></li>
+                                                    <li><a href="#" class="mega-item">Fresh Vegetables</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- Column 2: Bakery & Bread -->
+                                        <div class="mega-column">
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-bread-slice" style="color: #3498db;"></i>
+                                                    Bakery & Bread
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Shop All</a></li>
+                                                    <li><a href="#" class="mega-item">New in Bakery</a></li>
+                                                    <li><a href="#" class="mega-item">Sliced Bread</a></li>
+                                                    <li><a href="#" class="mega-item">Rolls & Buns</a></li>
+                                                    <li><a href="#" class="mega-item">Tortillas</a></li>
+                                                    <li><a href="#" class="mega-item">Breakfast Breads</a></li>
+                                                    <li><a href="#" class="mega-item">Pies</a></li>
+                                                    <li><a href="#" class="mega-item">Cookies & Brownies</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-snowflake" style="color: #f39c12;"></i>
+                                                    Frozen
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Frozen Breakfast</a></li>
+                                                    <li><a href="#" class="mega-item">Frozen Potatoes</a></li>
+                                                    <li><a href="#" class="mega-item">Frozen Meals & Snacks</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- Column 3: Snacks -->
+                                        <div class="mega-column">
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-cookie-bite" style="color: #9b59b6;"></i>
+                                                    Snacks
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Shop All</a></li>
+                                                    <li><a href="#" class="mega-item">Chips</a></li>
+                                                    <li><a href="#" class="mega-item">Popcorn & Pretzels</a></li>
+                                                    <li><a href="#" class="mega-item">Crackers</a></li>
+                                                    <li><a href="#" class="mega-item">Salsa & Dips</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-candy-cane" style="color: #e74c3c;"></i>
+                                                    Candy
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Shop All</a></li>
+                                                    <li><a href="#" class="mega-item">Better for You</a></li>
+                                                    <li><a href="#" class="mega-item">Chocolate</a></li>
+                                                    <li><a href="#" class="mega-item">Sugar Free Candy</a></li>
+                                                    <li><a href="#" class="mega-item">Gum</a></li>
+                                                    <li><a href="#" class="mega-item">Mints</a></li>
+                                                    <li><a href="#" class="mega-item">On-the-Go</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- Column 4: Cocktails & Mixes Coffee -->
+                                        <div class="mega-column">
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-cocktail" style="color: #e91e63;"></i>
+                                                    Cocktails & Mixes Coffee
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Ground Coffee</a></li>
+                                                    <li><a href="#" class="mega-item">Whole Bean Coffee</a></li>
+                                                    <li><a href="#" class="mega-item">Coffee Pods</a></li>
+                                                    <li><a href="#" class="mega-item">Instant Coffee</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-coffee" style="color: #2ecc71;"></i>
+                                                    Beverages
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Shop All</a></li>
+                                                    <li><a href="#" class="mega-item">Water</a></li>
+                                                    <li><a href="#" class="mega-item">Soft Drinks</a></li>
+                                                    <li><a href="#" class="mega-item">Fruit Juice</a></li>
+                                                    <li><a href="#" class="mega-item">Sports Drinks</a></li>
+                                                    <li><a href="#" class="mega-item">Energy Drinks</a></li>
+                                                    <li><a href="#" class="mega-item">Tea</a></li>
+                                                    <li><a href="#" class="mega-item">Hot Chocolate & Cocoa</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link active" onclick="toggleDropdown(event)">Beauty <i
+                                        class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu mega-menu beauty-menu">
+                                    <div class="mega-menu-content">
+                                        <!-- Column 1: Featured Shops & Trending in Beauty -->
+                                        <div class="mega-column">
+                                            <div class="mega-section featured-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-shopping-cart" style="color: #8e44ad;"></i>
+                                                    Featured Shops
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Pickup Today in Beauty</a></li>
+                                                    <li><a href="#" class="mega-item">BeautySpaceNK</a></li>
+                                                    <li><a href="#" class="mega-item">Equate Beauty</a></li>
+                                                    <li><a href="#" class="mega-item">Beauty Deals</a></li>
+                                                    <li><a href="#" class="mega-item">Walmart Exclusives</a></li>
+                                                    <li><a href="#" class="mega-item">Luxury Beauty Deals</a></li>
+                                                    <li><a href="#" class="mega-item">New Arrivals</a></li>
+                                                </ul>
+                                                <div class="rating-box">
+                                                    <span class="rating-number">4.81</span>
+                                                </div>
+                                            </div>
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-bell" style="color: #f39c12;"></i>
+                                                    Trending in Beauty
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Trending Beauty Products</a></li>
+                                                    <li><a href="#" class="mega-item">Celebrate Earth Day</a></li>
+                                                    <li><a href="#" class="mega-item">Prom-ready Beauty</a></li>
+                                                    <li><a href="#" class="mega-item">Summer Beauty</a></li>
+                                                    <li><a href="#" class="mega-item">Travel Size & Minis</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- Column 2: Featured Brands & Communities to Support -->
+                                        <div class="mega-column">
+                                            <div class="mega-section featured-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-tag" style="color: #e91e63;"></i>
+                                                    Featured Brands
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Shop All</a></li>
+                                                    <li><a href="#" class="mega-item">New in Bakery</a></li>
+                                                    <li><a href="#" class="mega-item">Sliced Bread</a></li>
+                                                    <li><a href="#" class="mega-item">Rolls & Buns</a></li>
+                                                    <li><a href="#" class="mega-item">Tortillas</a></li>
+                                                    <li><a href="#" class="mega-item">Breakfast Breads</a></li>
+                                                    <li><a href="#" class="mega-item">Pies</a></li>
+                                                    <li><a href="#" class="mega-item">Cookies & Brownies</a></li>
+                                                </ul>
+                                                <div class="rating-box">
+                                                    <span class="rating-number">4.81</span>
+                                                </div>
+                                            </div>
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-gem" style="color: #3498db;"></i>
+                                                    Communities to Support
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Black Owned Beauty</a></li>
+                                                    <li><a href="#" class="mega-item">LatinX Owned Beauty</a></li>
+                                                    <li><a href="#" class="mega-item">AAPI Owned Beauty</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- Column 3: Premium Beauty -->
+                                        <div class="mega-column">
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-leaf" style="color: #27ae60;"></i>
+                                                    Premium Beauty
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Shop All</a></li>
+                                                    <li><a href="#" class="mega-item">Hair Color</a></li>
+                                                    <li><a href="#" class="mega-item">Hair Care</a></li>
+                                                    <li><a href="#" class="mega-item">Skincare</a></li>
+                                                    <li><a href="#" class="mega-item">Fragrance</a></li>
+                                                    <li><a href="#" class="mega-item">Makeup</a></li>
+                                                    <li><a href="#" class="mega-item">Beauty Tech & Tools</a></li>
+                                                </ul>
+                                                <div class="rating-boxes">
+                                                    <div class="rating-box">
+                                                        <span class="rating-number">4.81</span>
+                                                    </div>
+                                                    <div class="rating-box">
+                                                        <span class="rating-number">4.81</span>
+                                                    </div>
+                                                    <div class="rating-box">
+                                                        <span class="rating-number">4.81</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Column 4: Beauty -->
+                                        <div class="mega-column">
+                                            <div class="mega-section">
+                                                <h4 class="mega-title">
+                                                    <i class="fas fa-star" style="color: #f39c12;"></i>
+                                                    Beauty
+                                                </h4>
+                                                <ul class="mega-list">
+                                                    <li><a href="#" class="mega-item">Shop All</a></li>
+                                                    <li><a href="#" class="mega-item">Men's Grooming</a></li>
+                                                    <li><a href="#" class="mega-item">Bath & Body</a></li>
+                                                    <li><a href="#" class="mega-item">Beauty Tech & Tools</a></li>
+                                                    <li><a href="#" class="mega-item">Makeup</a></li>
+                                                    <li><a href="#" class="mega-item">Fragrance</a></li>
+                                                    <li><a href="#" class="mega-item">Nail Care</a></li>
+                                                    <li><a href="#" class="mega-item">Hair Care</a></li>
+                                                    <li><a href="#" class="mega-item">Hair Color</a></li>
+                                                    <li><a href="#" class="mega-item">Skincare</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                </nav>
+            </div>
+
+            <div class="header-right">
+                <form action="" class="search-form">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search for products...">
+                </form>
+
+                <div class="cart-section">
+                    <div class="heart-section">
+                        <img class="heart-icon" src="../icon/Heart.svg" alt="Heart">
+                        <span>03</span>
+                    </div>
+                    <span class="heart-section-span">|</span>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge">03</span>
+                    </div>
+                    <div class="cart-total">$65.42</div>
+                </div>
+
+                <div class="user-profile">
+                    <img src="../images/Avatar.png" alt="User Avatar" class="avatar">
+                </div>
+            </div>
         </div>
-        <!-- End of Header Bar -->
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Departments</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Grocery</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Beauty</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- End of Nav -->
-        <form action="" class="search-form">
-            <input type="text" class="search-input" placeholder="Search for products...">
-            <button type="submit" class="search-button">
-                <i class="fas fa-search" src="./icons/search.svg"></i>
-            </button>
-        </form>
-        <!-- End of Search Form -->
+        <div class="overlay">
+            <label for="toggle-menu"></label>
+        </div>
     </header>
     <!-- End of Header -->
+
     <!-- Main -->
     <main>
+        <!-- Hero Banner -->
+        <section class="hero-banner">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>ORDER YOUR FAVORITE COFFEE</h1>
+                        <div class="slider-indicator">
+                            <div class="slider-dots">
+                                <div class="slider-dot active"></div>
+                                <div class="slider-dot"></div>
+                                <div class="slider-dot"></div>
+                                <div class="slider-dot"></div>
+                                <div class="slider-dot"></div>
+                            </div>
+                            <span class="slider-numbers">1 / 5</span>
+                        </div>
+                    </div>
+                    <div class="hero-images">
+                        <div class="coffee-bag">
+                            <img src="../images/mk-2-qG0ZWwd53Jk-unsplash 1.png" alt="Café Fugaz Coffee">
+                        </div>
+                        <div class="coffee-cup">
+                            <img src="../images/mk-2-qG0ZWwd53Jk-unsplash02 1.png" alt="Coffee Cup">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of Hero Banner -->
 
+        <!-- Browse Categories -->
+        <section class="browse-categories">
+            <div class="container">
+                <h2>Browse Categories</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="../images/image 83.png" alt="Coffee Blend">
+                        </div>
+                        <div class="category-info">
+                            <div class="price-range">$24 - $150</div>
+                            <p>New sumatra mandeling coffe blend</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="../images/image 84.png" alt="Espresso">
+                        </div>
+                        <div class="category-info">
+                            <div class="price-range">$37 - $160</div>
+                            <p>Espresso arabica and robusta beans</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="../images/image 85.png" alt="Lavazza">
+                        </div>
+                        <div class="category-info">
+                            <div class="price-range">$32 - $160</div>
+                            <p>Lavazza top class whole bean coffee blend</p>
+                        </div>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="../images/image 85.png" alt="Lavazza">
+                        </div>
+                        <div class="category-info">
+                            <div class="price-range">$32 - $160</div>
+                            <p>Lavazza top class whole bean coffee blend</p>
+                        </div>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="../images/image 85.png" alt="Lavazza">
+                        </div>
+                        <div class="category-info">
+                            <div class="price-range">$32 - $160</div>
+                            <p>Lavazza top class whole bean coffee blend</p>
+                        </div>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="../images/image 85.png" alt="Lavazza">
+                        </div>
+                        <div class="category-info">
+                            <div class="price-range">$32 - $160</div>
+                            <p>Lavazza top class whole bean coffee blend</p>
+                        </div>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="../images/image 85.png" alt="Lavazza">
+                        </div>
+                        <div class="category-info">
+                            <div class="price-range">$32 - $160</div>
+                            <p>Lavazza top class whole bean coffee blend</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End of Browse Categories -->
+
+        <!-- Product Listing -->
+        <section class="product-listing">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Total LavAzza 1320</h2>
+                    <div class="filter-section" onclick="toggleFilterModal()">
+                        <span>Filter</span>
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../images/image - UIHUT.png" alt="Coffee Beans">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <img src="../icon/Heart.svg" alt="Heart">
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Coffee Beans - Espresso Arabica and Robusta Beans</h3>
+                            <p class="brand">Lavazza</p>
+                            <div class="rating">
+                                <p class="price">$53.00</p>
+                                <img src="../icon/Star.svg" alt="Star" class="star-icon">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../images/image - UIHUT1.png" alt="Lavazza Blend">
+                            <button class="favorite-btn active" onclick="toggleFavorite(this)">
+                                <img src="../icon/Heart-active.svg" alt="Heart">
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Lavazza Coffee Blends - Try the Italian Espresso</h3>
+                            <p class="brand">Lavazza</p>
+                            <div class="rating">
+                                <p class="price">$53.00</p>
+                                <img src="../icon/Star.svg" alt="Star" class="star-icon">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../images/image - UIHUT2.png" alt="Black Tin">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <img src="../icon/Heart.svg" alt="Heart">
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Lavazza - Caffé Espresso Black Tin - Ground coffee</h3>
+                            <p class="brand">welikecoffee</p>
+                            <div class="rating">
+                                <p class="price">$53.00</p>
+                                <img src="../icon/Star.svg" alt="Star" class="star-icon">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../images/image - UIHUT3.png" alt="Qualità Oro">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <img src="../icon/Heart.svg" alt="Heart">
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Qualità Oro Mountain Grown - Espresso Coffee Beans</h3>
+                            <p class="brand">Lavazza</p>
+                            <div class="rating">
+                                <p class="price">$53.00</p>
+                                <img src="../icon/Star.svg" alt="Star" class="star-icon">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../images/image - UIHUT3.png" alt="Qualità Oro">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <img src="../icon/Heart.svg" alt="Heart">
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Qualità Oro Mountain Grown - Espresso Coffee Beans</h3>
+                            <p class="brand">Lavazza</p>
+                            <div class="rating">
+                                <p class="price">$53.00</p>
+                                <img src="../icon/Star.svg" alt="Star" class="star-icon">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../images/image - UIHUT3.png" alt="Qualità Oro">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <img src="../icon/Heart.svg" alt="Heart">
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Qualità Oro Mountain Grown - Espresso Coffee Beans</h3>
+                            <p class="brand">Lavazza</p>
+                            <div class="rating">
+                                <p class="price">$53.00</p>
+                                <img src="../icon/Star.svg" alt="Star" class="star-icon">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../images/image - UIHUT3.png" alt="Qualità Oro">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <img src="../icon/Heart.svg" alt="Heart">
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Qualità Oro Mountain Grown - Espresso Coffee Beans</h3>
+                            <p class="brand">Lavazza</p>
+                            <div class="rating">
+                                <p class="price">$53.00</p>
+                                <img src="../icon/Star.svg" alt="Star" class="star-icon">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End of Product Listing -->
     </main>
     <!-- End of Main -->
+
+    <!-- Filter Modal -->
+    <div class="filter-modal" id="filterModal">
+        <div class="filter-modal-content">
+            <div class="filter-header">
+                <h3>Filter</h3>
+                <button class="close-filter" onclick="toggleFilterModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="filter-body">
+                <!-- Price Filter -->
+                <div class="filter-group">
+                    <h4>Price</h4>
+                    <div class="price-slider-container">
+                        <div class="price-slider">
+                            <input type="range" min="0" max="200" value="30" class="slider" id="minPrice">
+                            <input type="range" min="0" max="200" value="100" class="slider" id="maxPrice">
+                        </div>
+                        <div class="price-inputs">
+                            <div class="price-input">
+                                <label>Minimum</label>
+                                <input type="text" value="$30.00" readonly>
+                            </div>
+                            <div class="price-input">
+                                <label>Maximum</label>
+                                <input type="text" value="$100.00" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Size/Weight Filter -->
+                <div class="filter-group">
+                    <h4>Size/Weight</h4>
+                    <div class="size-inputs">
+                        <select class="size-select">
+                            <option value="500g">500g</option>
+                            <option value="1kg">1kg</option>
+                            <option value="2kg">2kg</option>
+                        </select>
+                        <select class="unit-select">
+                            <option value="gram">Gram</option>
+                            <option value="kg">Kg</option>
+                        </select>
+                    </div>
+                    <div class="size-buttons">
+                        <button class="size-btn">Small</button>
+                        <button class="size-btn">Medium</button>
+                        <button class="size-btn">Large</button>
+                    </div>
+                </div>
+
+                <!-- Brand Filter -->
+                <div class="filter-group">
+                    <h4>Brand</h4>
+                    <div class="brand-search">
+                        <input type="text" placeholder="Search brand name">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="brand-buttons">
+                        <button class="brand-btn active">Lavazza</button>
+                        <button class="brand-btn">Nescafe</button>
+                        <button class="brand-btn">Starbucks</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-footer">
+                <button class="cancel-btn" onclick="toggleFilterModal()">Cancel</button>
+                <button class="show-result-btn">Show Result</button>
+            </div>
+        </div>
+    </div>
+    <!-- End of Filter Modal -->
+
     <!-- Footer -->
     <footer>
-
+        <!-- Footer content can be added here -->
     </footer>
     <!-- End of Footer -->
+
+    <script>
+        function toggleFavorite(button) {
+            const heartImg = button.querySelector('img');
+            const isActive = button.classList.contains('active');
+
+            if (isActive) {
+                // Chuyển về trạng thái không active
+                button.classList.remove('active');
+                heartImg.src = '/icon/Heart.svg';
+            } else {
+                // Chuyển về trạng thái active
+                button.classList.add('active');
+                heartImg.src = '/icon/Heart-active.svg';
+            }
+        }
+
+        function toggleFilterModal() {
+            const modal = document.getElementById('filterModal');
+            modal.classList.toggle('active');
+        }
+
+        function toggleDropdown(event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            const dropdown = event.target.closest('.dropdown');
+            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+            const chevron = dropdown.querySelector('.fa-chevron-down');
+
+            // Close all other dropdowns
+            document.querySelectorAll('.dropdown').forEach(item => {
+                if (item !== dropdown) {
+                    item.classList.remove('active');
+                    const otherMenu = item.querySelector('.dropdown-menu');
+                    const otherChevron = item.querySelector('.fa-chevron-down');
+                    if (otherMenu) otherMenu.style.display = 'none';
+                    if (otherChevron) otherChevron.style.transform = 'rotate(0deg)';
+                }
+            });
+
+            // Toggle current dropdown
+            dropdown.classList.toggle('active');
+
+            if (dropdown.classList.contains('active')) {
+                dropdownMenu.style.display = 'block';
+                chevron.style.transform = 'rotate(180deg)';
+            } else {
+                dropdownMenu.style.display = 'none';
+                chevron.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                    const menu = dropdown.querySelector('.dropdown-menu');
+                    const chevron = dropdown.querySelector('.fa-chevron-down');
+                    if (menu) menu.style.display = 'none';
+                    if (chevron) chevron.style.transform = 'rotate(0deg)';
+                });
+            }
+        });
+
+        // Close modal when clicking outside
+        document.addEventListener('click', function (event) {
+            const modal = document.getElementById('filterModal');
+            const filterSection = document.querySelector('.filter-section');
+
+            if (modal.classList.contains('active') &&
+                !modal.contains(event.target) &&
+                !filterSection.contains(event.target)) {
+                modal.classList.remove('active');
+            }
+        });
+
+        // Price slider functionality
+        function initPriceSlider() {
+            const minSlider = document.getElementById('minPrice');
+            const maxSlider = document.getElementById('maxPrice');
+            const minInput = document.querySelector('.price-input input[value="$30.00"]');
+            const maxInput = document.querySelector('.price-input input[value="$100.00"]');
+
+            function updatePriceInputs() {
+                const minValue = parseInt(minSlider.value);
+                const maxValue = parseInt(maxSlider.value);
+
+                minInput.value = `$${minValue}.00`;
+                maxInput.value = `$${maxValue}.00`;
+            }
+
+            minSlider.addEventListener('input', function () {
+                if (parseInt(this.value) >= parseInt(maxSlider.value)) {
+                    this.value = parseInt(maxSlider.value) - 1;
+                }
+                updatePriceInputs();
+            });
+
+            maxSlider.addEventListener('input', function () {
+                if (parseInt(this.value) <= parseInt(minSlider.value)) {
+                    this.value = parseInt(minSlider.value) + 1;
+                }
+                updatePriceInputs();
+            });
+        }
+
+        // Size button functionality
+        function initSizeButtons() {
+            const sizeButtons = document.querySelectorAll('.size-btn');
+
+            sizeButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    sizeButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        }
+
+        // Brand button functionality
+        function initBrandButtons() {
+            const brandButtons = document.querySelectorAll('.brand-btn');
+
+            brandButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    brandButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        }
+
+        // Show result functionality
+        function initShowResult() {
+            const showResultBtn = document.querySelector('.show-result-btn');
+
+            showResultBtn.addEventListener('click', function () {
+                // Get selected filters
+                const minPrice = document.getElementById('minPrice').value;
+                const maxPrice = document.getElementById('maxPrice').value;
+                const selectedSize = document.querySelector('.size-btn.active');
+                const selectedBrand = document.querySelector('.brand-btn.active');
+
+                // Filter results applied
+
+                // Close modal
+                toggleFilterModal();
+
+                // Here you would typically filter the products
+                // Filter logic can be implemented here
+            });
+        }
+
+        // Initialize all functionality when page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            initPriceSlider();
+            initSizeButtons();
+            initBrandButtons();
+            initShowResult();
+        });
+    </script>
 </body>
 
 </html>
