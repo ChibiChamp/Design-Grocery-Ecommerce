@@ -209,6 +209,8 @@ body {
   font-size: 1.4rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: 500;
+  color: #1a162e;
 }
 
 .product-content
@@ -216,7 +218,12 @@ body {
   .product-name
   .product-left
   .product-size
-  button:hover,
+  button:hover:not(.active) {
+  border-color: #ff6b35;
+  background: #fff5f2;
+  transform: scale(1.05);
+}
+
 .product-content
   .product-info
   .product-name
@@ -226,6 +233,9 @@ body {
   border-color: #ff6b35;
   background: #ff6b35;
   color: white;
+  font-weight: 600;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
 }
 
 /* Right Column - Delivery Options */

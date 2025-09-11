@@ -18,7 +18,24 @@ body {
   color: #333;
   line-height: 1.6;
 }
-
+.main-container-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+.main-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
 .header {
   position: sticky;
   top: 0;
@@ -982,18 +999,27 @@ body {
    RESPONSIVE STYLES
    ============================================ */
 @media screen and (max-width: 1399.98px) {
+  .main-container-wrapper {
+    width: 100%;
+  }
   .mobile-menu-btn {
     display: none;
   }
 }
 
 @media screen and (max-width: 1199.98px) {
+  .main-container-wrapper {
+    width: 100%;
+  }
   .mobile-menu-btn {
     display: none;
   }
 }
 
 @media screen and (max-width: 991.98px) {
+  .main-container-wrapper {
+    width: 100%;
+  }
   .mobile-menu-btn {
     display: block;
   }
