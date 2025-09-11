@@ -454,233 +454,328 @@
             </div>
             <!-- end of profile-menu -->
             <div class="profile-content">
+                <div class="profile-header">
+                    <div class="title">
+                        <h2>My Wallet</h2>
+                        <p>Payment methods</p>
+                    </div>
+                    <div class="header-content">
+                        <img src="../images/visaa.png" alt="">
+                        <img src="../images/visaa.png" alt="">
+                        <a href="#">
+                            <img src="../icon/Plus.svg" alt="">
+                            <span>Add New Card</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="profile-content-body">
+                    <div class="title">
+                        <h2>Account info</h2>
+                        <p>Addresses, contact information and password</p>
+                    </div>
+                    <div class="nag-mod">
+                        <div class="body-content">
+                            <div class="body-content-item">
+                                <img src="../icon/Message.svg" alt="">
+                                <div class="info">
+                                    <h4>Email Address</h4>
+                                    <p>imran@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="body-content">
+                            <div class="body-content-item">
+                                <img src="../icon/Calling.svg" alt="">
+                                <div class="info">
+                                    <h4>Phone Number</h4>
+                                    <p>+923123456789</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="body-content">
+                            <div class="body-content-item">
+                                <img src="../icon/Location.svg" alt="">
+                                <div class="info">
+                                    <h4>Add an address</h4>
+                                    <p>Bangladesh Embassy, Washington, DC 20008</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-content-footer">
+                    <div class="title">
+                        <h2>Lists</h2>
+                        <p>2 items - Primary</p>
+                    </div>
+                    <div class="list-content">
+                        <div class="list-item">
+                            <img src="../images/image - UIHUT2.png" alt="">
+                            <div class="info">
+                                <div class="info-title">
+                                    <h3>Coffee Beans - Espresso Arabica and Robusta Beans</h3>
+                                </div>
+                                <div class="info-price">
+                                    <p>$47.00</p>
+                                    <a href="#">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="list-item">
+                            <img src="../images/image - UIHUT2.png" alt="">
+                            <div class="info">
+                                <div class="info-title">
+                                    <h3>Coffee Beans - Espresso Arabica and Robusta Beans</h3>
+                                </div>
+                                <div class="info-price">
+                                    <p>$47.00</p>
+                                    <a href="#">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="list-item">
+                            <img src="../images/image - UIHUT2.png" alt="">
+                            <div class="info">
+                                <div class="info-title">
+                                    <h3>Coffee Beans - Espresso Arabica and Robusta Beans</h3>
+                                </div>
+                                <div class="info-price">
+                                    <p>$47.00</p>
+                                    <a href="#">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of profile-content -->
             </div>
-            <!-- end of profile-content -->
         </div>
-    </div>
-    <script>
-        // Close menu when clicking close button or overlay
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuToggle = document.getElementById('menu-toggle');
-            const closeMenuBtn = document.querySelector('.menu .mobile-menu-btn');
-            const overlay = document.querySelector('.overlay');
+        <script>
+            // Close menu when clicking close button or overlay
+            document.addEventListener('DOMContentLoaded', function () {
+                const menuToggle = document.getElementById('menu-toggle');
+                const closeMenuBtn = document.querySelector('.menu .mobile-menu-btn');
+                const overlay = document.querySelector('.overlay');
 
-            // Close menu when close button is clicked
-            if (closeMenuBtn) {
-                closeMenuBtn.addEventListener('click', function () {
-                    menuToggle.checked = false;
+                // Close menu when close button is clicked
+                if (closeMenuBtn) {
+                    closeMenuBtn.addEventListener('click', function () {
+                        menuToggle.checked = false;
+                    });
+                }
+
+                // Close menu when overlay is clicked
+                if (overlay) {
+                    overlay.addEventListener('click', function () {
+                        menuToggle.checked = false;
+                    });
+                }
+
+                // Filter Modal Functionality
+                const filterBtn = document.getElementById('filter-btn');
+                const filterModal = document.getElementById('filter-modal');
+                const closeFilter = document.getElementById('close-filter');
+                const cancelFilter = document.getElementById('cancel-filter');
+                const showResult = document.getElementById('show-result');
+                const filterOverlay = document.querySelector('.filter-overlay');
+
+                // Open filter modal
+                if (filterBtn) {
+                    filterBtn.addEventListener('click', function () {
+                        filterModal.classList.add('active');
+                    });
+                }
+
+                // Close filter modal
+                function closeFilterModal() {
+                    filterModal.classList.remove('active');
+                }
+
+                if (closeFilter) {
+                    closeFilter.addEventListener('click', closeFilterModal);
+                }
+
+                if (cancelFilter) {
+                    cancelFilter.addEventListener('click', closeFilterModal);
+                }
+
+                if (filterOverlay) {
+                    filterOverlay.addEventListener('click', closeFilterModal);
+                }
+
+                // Show result button
+                if (showResult) {
+                    showResult.addEventListener('click', function () {
+                        // Here you can add logic to apply filters
+                        console.log('Applying filters...');
+                        closeFilterModal();
+                    });
+                }
+
+                // Price range functionality
+                const priceMin = document.getElementById('price-min');
+                const priceMax = document.getElementById('price-max');
+                const minPriceDisplay = document.getElementById('min-price');
+                const maxPriceDisplay = document.getElementById('max-price');
+
+                function updatePriceDisplay() {
+                    if (minPriceDisplay) minPriceDisplay.value = '$' + priceMin.value + '.00';
+                    if (maxPriceDisplay) maxPriceDisplay.value = '$' + priceMax.value + '.00';
+                }
+
+                if (priceMin && priceMax) {
+                    priceMin.addEventListener('input', updatePriceDisplay);
+                    priceMax.addEventListener('input', updatePriceDisplay);
+                }
+
+                // Size button functionality
+                const sizeBtns = document.querySelectorAll('.size-btn');
+                sizeBtns.forEach(btn => {
+                    btn.addEventListener('click', function () {
+                        sizeBtns.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                    });
                 });
-            }
 
-            // Close menu when overlay is clicked
-            if (overlay) {
-                overlay.addEventListener('click', function () {
-                    menuToggle.checked = false;
+                // Brand button functionality
+                const brandBtns = document.querySelectorAll('.brand-btn');
+                brandBtns.forEach(btn => {
+                    btn.addEventListener('click', function () {
+                        brandBtns.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                    });
                 });
-            }
 
-            // Filter Modal Functionality
-            const filterBtn = document.getElementById('filter-btn');
-            const filterModal = document.getElementById('filter-modal');
-            const closeFilter = document.getElementById('close-filter');
-            const cancelFilter = document.getElementById('cancel-filter');
-            const showResult = document.getElementById('show-result');
-            const filterOverlay = document.querySelector('.filter-overlay');
+                // Checkout Page Functionality
+                // Quantity Selector
+                const quantitySelectors = document.querySelectorAll('.quantity-selector');
+                quantitySelectors.forEach(selector => {
+                    const minusBtn = selector.querySelector('.qty-btn.minus');
+                    const plusBtn = selector.querySelector('.qty-btn.plus');
+                    const qtyNumber = selector.querySelector('.qty-number');
 
-            // Open filter modal
-            if (filterBtn) {
-                filterBtn.addEventListener('click', function () {
-                    filterModal.classList.add('active');
-                });
-            }
+                    let quantity = parseInt(qtyNumber.textContent);
 
-            // Close filter modal
-            function closeFilterModal() {
-                filterModal.classList.remove('active');
-            }
+                    if (minusBtn) {
+                        minusBtn.addEventListener('click', function () {
+                            if (quantity > 1) {
+                                quantity--;
+                                qtyNumber.textContent = quantity;
+                                updateTotalPrice();
+                            }
+                        });
+                    }
 
-            if (closeFilter) {
-                closeFilter.addEventListener('click', closeFilterModal);
-            }
-
-            if (cancelFilter) {
-                cancelFilter.addEventListener('click', closeFilterModal);
-            }
-
-            if (filterOverlay) {
-                filterOverlay.addEventListener('click', closeFilterModal);
-            }
-
-            // Show result button
-            if (showResult) {
-                showResult.addEventListener('click', function () {
-                    // Here you can add logic to apply filters
-                    console.log('Applying filters...');
-                    closeFilterModal();
-                });
-            }
-
-            // Price range functionality
-            const priceMin = document.getElementById('price-min');
-            const priceMax = document.getElementById('price-max');
-            const minPriceDisplay = document.getElementById('min-price');
-            const maxPriceDisplay = document.getElementById('max-price');
-
-            function updatePriceDisplay() {
-                if (minPriceDisplay) minPriceDisplay.value = '$' + priceMin.value + '.00';
-                if (maxPriceDisplay) maxPriceDisplay.value = '$' + priceMax.value + '.00';
-            }
-
-            if (priceMin && priceMax) {
-                priceMin.addEventListener('input', updatePriceDisplay);
-                priceMax.addEventListener('input', updatePriceDisplay);
-            }
-
-            // Size button functionality
-            const sizeBtns = document.querySelectorAll('.size-btn');
-            sizeBtns.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    sizeBtns.forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
-
-            // Brand button functionality
-            const brandBtns = document.querySelectorAll('.brand-btn');
-            brandBtns.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    brandBtns.forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
-
-            // Checkout Page Functionality
-            // Quantity Selector
-            const quantitySelectors = document.querySelectorAll('.quantity-selector');
-            quantitySelectors.forEach(selector => {
-                const minusBtn = selector.querySelector('.qty-btn.minus');
-                const plusBtn = selector.querySelector('.qty-btn.plus');
-                const qtyNumber = selector.querySelector('.qty-number');
-
-                let quantity = parseInt(qtyNumber.textContent);
-
-                if (minusBtn) {
-                    minusBtn.addEventListener('click', function () {
-                        if (quantity > 1) {
-                            quantity--;
+                    if (plusBtn) {
+                        plusBtn.addEventListener('click', function () {
+                            quantity++;
                             qtyNumber.textContent = quantity;
                             updateTotalPrice();
-                        }
-                    });
-                }
-
-                if (plusBtn) {
-                    plusBtn.addEventListener('click', function () {
-                        quantity++;
-                        qtyNumber.textContent = quantity;
-                        updateTotalPrice();
-                    });
-                }
-            });
-
-            // Brand Dropdown
-            const brandDropdowns = document.querySelectorAll('.brand-dropdown');
-            brandDropdowns.forEach(dropdown => {
-                const dropdownBtn = dropdown.querySelector('.dropdown-btn');
-                const dropdownSpan = dropdown.querySelector('.dropdown-btn span');
-
-                if (dropdownBtn) {
-                    dropdownBtn.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        // Toggle dropdown functionality
-                        console.log('Brand dropdown clicked');
-                        // You can add dropdown menu functionality here
-                    });
-                }
-            });
-
-            // Update total price function
-            function updateTotalPrice() {
-                const basePrice = 47.00; // Base price for the product
-                const quantity = parseInt(document.querySelector('.qty-number').textContent);
-                const totalPrice = basePrice * quantity;
-
-                // Update price display if exists
-                const priceDisplay = document.querySelector('.checkout-info span');
-                if (priceDisplay) {
-                    priceDisplay.textContent = `$${totalPrice.toFixed(2)} | In Stock`;
-                }
-            }
-
-            // Add hover effects
-            const interactiveElements = document.querySelectorAll('.dropdown-btn, .qty-btn');
-            interactiveElements.forEach(element => {
-                element.addEventListener('mouseenter', function () {
-                    this.style.transform = 'scale(1.05)';
-                });
-
-                element.addEventListener('mouseleave', function () {
-                    this.style.transform = 'scale(1)';
-                });
-            });
-
-            // Save and Delete functionality
-            const saveButtons = document.querySelectorAll('.delete-item li a[href="#"]:first-child');
-            const deleteButtons = document.querySelectorAll('.delete-item li a[href="#"]:last-child');
-
-            saveButtons.forEach(button => {
-                button.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    console.log('Item saved to wishlist');
-                    // Add visual feedback
-                    this.style.color = '#ff6b35';
-                    this.innerHTML = '<img src="../icon/Heart-active.svg" alt="Heart"><span>Saved</span>';
-                    setTimeout(() => {
-                        this.style.color = '#9e9da8';
-                        this.innerHTML = '<img src="../icon/Heart.svg" alt="Heart"><span>Save</span>';
-                    }, 2000);
-                });
-            });
-
-            deleteButtons.forEach(button => {
-                button.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    console.log('Item deleted from cart');
-                    // Add confirmation dialog
-                    if (confirm('Are you sure you want to delete this item?')) {
-                        const checkItem = this.closest('.check-item');
-                        if (checkItem) {
-                            checkItem.style.opacity = '0.5';
-                            checkItem.style.transform = 'translateX(-100%)';
-                            setTimeout(() => {
-                                checkItem.remove();
-                                updateCartCount();
-                            }, 300);
-                        }
+                        });
                     }
                 });
-            });
 
-            // Update cart count function
-            function updateCartCount() {
-                const remainingItems = document.querySelectorAll('.check-item').length;
-                console.log(`Cart now has ${remainingItems} items`);
-                // You can update cart count display here
-            }
+                // Brand Dropdown
+                const brandDropdowns = document.querySelectorAll('.brand-dropdown');
+                brandDropdowns.forEach(dropdown => {
+                    const dropdownBtn = dropdown.querySelector('.dropdown-btn');
+                    const dropdownSpan = dropdown.querySelector('.dropdown-btn span');
 
-            // Checkout button functionality
-            const checkoutBtn = document.querySelector('.checkout-btn');
-            if (checkoutBtn) {
-                checkoutBtn.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    console.log('Proceeding to checkout...');
-                    // You can add checkout logic here
-                    alert('Proceeding to checkout!');
+                    if (dropdownBtn) {
+                        dropdownBtn.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            // Toggle dropdown functionality
+                            console.log('Brand dropdown clicked');
+                            // You can add dropdown menu functionality here
+                        });
+                    }
                 });
-            }
-        });
-    </script>
+
+                // Update total price function
+                function updateTotalPrice() {
+                    const basePrice = 47.00; // Base price for the product
+                    const quantity = parseInt(document.querySelector('.qty-number').textContent);
+                    const totalPrice = basePrice * quantity;
+
+                    // Update price display if exists
+                    const priceDisplay = document.querySelector('.checkout-info span');
+                    if (priceDisplay) {
+                        priceDisplay.textContent = `$${totalPrice.toFixed(2)} | In Stock`;
+                    }
+                }
+
+                // Add hover effects
+                const interactiveElements = document.querySelectorAll('.dropdown-btn, .qty-btn');
+                interactiveElements.forEach(element => {
+                    element.addEventListener('mouseenter', function () {
+                        this.style.transform = 'scale(1.05)';
+                    });
+
+                    element.addEventListener('mouseleave', function () {
+                        this.style.transform = 'scale(1)';
+                    });
+                });
+
+                // Save and Delete functionality
+                const saveButtons = document.querySelectorAll('.delete-item li a[href="#"]:first-child');
+                const deleteButtons = document.querySelectorAll('.delete-item li a[href="#"]:last-child');
+
+                saveButtons.forEach(button => {
+                    button.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        console.log('Item saved to wishlist');
+                        // Add visual feedback
+                        this.style.color = '#ff6b35';
+                        this.innerHTML = '<img src="../icon/Heart-active.svg" alt="Heart"><span>Saved</span>';
+                        setTimeout(() => {
+                            this.style.color = '#9e9da8';
+                            this.innerHTML = '<img src="../icon/Heart.svg" alt="Heart"><span>Save</span>';
+                        }, 2000);
+                    });
+                });
+
+                deleteButtons.forEach(button => {
+                    button.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        console.log('Item deleted from cart');
+                        // Add confirmation dialog
+                        if (confirm('Are you sure you want to delete this item?')) {
+                            const checkItem = this.closest('.check-item');
+                            if (checkItem) {
+                                checkItem.style.opacity = '0.5';
+                                checkItem.style.transform = 'translateX(-100%)';
+                                setTimeout(() => {
+                                    checkItem.remove();
+                                    updateCartCount();
+                                }, 300);
+                            }
+                        }
+                    });
+                });
+
+                // Update cart count function
+                function updateCartCount() {
+                    const remainingItems = document.querySelectorAll('.check-item').length;
+                    console.log(`Cart now has ${remainingItems} items`);
+                    // You can update cart count display here
+                }
+
+                // Checkout button functionality
+                const checkoutBtn = document.querySelector('.checkout-btn');
+                if (checkoutBtn) {
+                    checkoutBtn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        console.log('Proceeding to checkout...');
+                        // You can add checkout logic here
+                        alert('Proceeding to checkout!');
+                    });
+                }
+            });
+        </script>
 </body>
 
 </html>

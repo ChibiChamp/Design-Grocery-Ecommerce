@@ -25,7 +25,7 @@ body {
 
 .profile-container {
   width: 100%;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   height: auto;
   display: flex;
   align-items: start;
@@ -58,9 +58,9 @@ body {
 .profile-background {
   background-image: url(../../images/back.png);
   background-size: 100% 100%;
-  object-fit: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  object-fit: contain;
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
   padding: 40px 30px;
   text-align: center;
   position: relative;
@@ -196,6 +196,161 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   border-color: white;
   transform: translateY(-2px);
+}
+.profile-header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.profile-header .title {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  flex-direction: column;
+}
+.title h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1a162e;
+}
+.title p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #1a162e;
+}
+.profile-header .header-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.profile-header .header-content img {
+  width: 35%;
+  height: 35%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.profile-header .header-content a {
+  width: 25%;
+  height: 35%;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px dashed #d2d1d6;
+  padding: 30px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: #1a162e;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.profile-header .header-content a img {
+  width: 25%;
+  height: 25%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.profile-content-body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
+}
+.nag-mod {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.body-content .body-content-item {
+  width: 350px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  /* gap: 10px; */
+  margin-right: 20px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f6f6f6;
+}
+.body-content .body-content-item .info {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+.list-content .list-item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #e5e5e5;
+}
+.list-content .list-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.list-content .list-item .info {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+.list-content .list-item .info .info-title h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1a162e;
+}
+.list-content .list-item .info .info-price {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  margin-top: 10px;
+  line-height: 1.2;
+}
+.list-content .list-item .info .info-price p {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #1a162e;
+}
+
+.list-content .list-item .info .info-price a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1a162e;
+  text-decoration: none;
+  /* border: 1px solid #1a162e; */
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  background-color: #ffb700;
+  color: #1a162e;
 }
 
 /* Responsive Design */
