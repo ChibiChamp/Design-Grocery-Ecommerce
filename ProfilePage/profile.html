@@ -400,7 +400,7 @@
                         </div>
                         <div class="menu-section">
                             <h3>Manage Account</h3>
-                            <div class="menu-item">
+                            <div class="menu-item" id="personalInfoBtn">
                                 <img src="../icon/Profile.svg" alt="Person">
                                 <span>Personal info</span>
                             </div>
@@ -618,6 +618,49 @@
                     </div>
                 </div>
                 <!-- end of debit-card -->
+
+                <div class="Personal-info">
+                    <div class="back">
+                        <a href="#" id="personalInfoBackBtn">
+                            <img src="../icon/Arrow - Left.svg" alt="Back">
+                            <span>Personal info</span>
+                        </a>
+                    </div>
+                    <form class="add-card-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Full name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Imran" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName">Email address</label>
+                                <input type="" id="lastName" name="lastName" placeholder="admin@uihut.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Phone number</label>
+                                <input type="text" id="CardInformation" name="CardInformation"
+                                    placeholder="+008 01234 56789" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName">Password</label>
+                                <input type="password" id="Password" name="Password" placeholder="Password" required>
+                            </div>
+                        </div>
+
+
+                    </form>
+                    <div class="checkbox-group-info">
+                        <div class="form-actions-info">
+                            <button type="button" class="cancel-btn" id="personalInfoCancelBtn">Cancel</button>
+                            <button type="submit" class="save-card-btn">Save Edit</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- end of profile-content -->
         </div>
@@ -639,48 +682,63 @@
                     backBtn: document.getElementById('backBtn'),
                     backLinkBtn: document.getElementById('backLinkBtn'),
                     profileContentContainer: document.querySelector('.profile-content-container'),
-                    debitCard: document.querySelector('.debit-card')
+                    debitCard: document.querySelector('.debit-card'),
+                    personalInfoBtn: document.getElementById('personalInfoBtn'),
+                    personalInfo: document.querySelector('.Personal-info'),
+                    personalInfoBackBtn: document.getElementById('personalInfoBackBtn'),
+                    personalInfoCancelBtn: document.getElementById('personalInfoCancelBtn')
                 };
 
                 // Utility functions
                 const utils = {
-                    addEvent: (element, event, handler) => element && element.addEventListener(event, handler),
-                    toggleClass: (element, className) => element && element.classList.toggle(className),
+                    addEvent: (element, event, handler) => element?.addEventListener(event, handler),
+                    toggleClass: (element, className) => element?.classList.toggle(className),
                     hide: (element) => element && (element.style.display = 'none'),
-                    show: (element, display = 'block') => element && (element.style.display = display)
+                    show: (element, display = 'block') => element && (element.style.display = display),
+                    addEvents: (events) => events.forEach(({ element, event, handler }) =>
+                        element?.addEventListener(event, handler))
                 };
 
                 // Menu functionality
                 const closeMenu = () => elements.menuToggle.checked = false;
-                utils.addEvent(elements.closeMenuBtn, 'click', closeMenu);
-                utils.addEvent(elements.overlay, 'click', closeMenu);
 
                 // Filter modal functionality
                 const openFilter = () => elements.filterModal.classList.add('active');
                 const closeFilterModal = () => elements.filterModal.classList.remove('active');
 
-                utils.addEvent(elements.filterBtn, 'click', openFilter);
-                utils.addEvent(elements.closeFilter, 'click', closeFilterModal);
-                utils.addEvent(elements.cancelFilter, 'click', closeFilterModal);
-                utils.addEvent(elements.filterOverlay, 'click', closeFilterModal);
-                utils.addEvent(elements.showResult, 'click', () => {
-                    console.log('Applying filters...');
-                    closeFilterModal();
-                });
+                // Common event listeners
+                const commonEvents = [
+                    { element: elements.closeMenuBtn, event: 'click', handler: closeMenu },
+                    { element: elements.overlay, event: 'click', handler: closeMenu },
+                    { element: elements.filterBtn, event: 'click', handler: openFilter },
+                    { element: elements.closeFilter, event: 'click', handler: closeFilterModal },
+                    { element: elements.cancelFilter, event: 'click', handler: closeFilterModal },
+                    { element: elements.filterOverlay, event: 'click', handler: closeFilterModal },
+                    {
+                        element: elements.showResult, event: 'click', handler: () => {
+                            console.log('Applying filters...');
+                            closeFilterModal();
+                        }
+                    }
+                ];
+
+                utils.addEvents(commonEvents);
 
                 // Price range functionality
-                const priceMin = document.getElementById('price-min');
-                const priceMax = document.getElementById('price-max');
-                const minPriceDisplay = document.getElementById('min-price');
-                const maxPriceDisplay = document.getElementById('max-price');
-
-                const updatePriceDisplay = () => {
-                    if (minPriceDisplay) minPriceDisplay.value = `$${priceMin.value}.00`;
-                    if (maxPriceDisplay) maxPriceDisplay.value = `$${priceMax.value}.00`;
+                const priceElements = {
+                    min: document.getElementById('price-min'),
+                    max: document.getElementById('price-max'),
+                    minDisplay: document.getElementById('min-price'),
+                    maxDisplay: document.getElementById('max-price')
                 };
 
-                utils.addEvent(priceMin, 'input', updatePriceDisplay);
-                utils.addEvent(priceMax, 'input', updatePriceDisplay);
+                const updatePriceDisplay = () => {
+                    if (priceElements.minDisplay) priceElements.minDisplay.value = `$${priceElements.min.value}.00`;
+                    if (priceElements.maxDisplay) priceElements.maxDisplay.value = `$${priceElements.max.value}.00`;
+                };
+
+                utils.addEvent(priceElements.min, 'input', updatePriceDisplay);
+                utils.addEvent(priceElements.max, 'input', updatePriceDisplay);
 
                 // Button group functionality (size, brand)
                 const initButtonGroup = (selector, activeClass = 'active') => {
@@ -724,10 +782,13 @@
                 };
 
                 // Hover effects
-                document.querySelectorAll('.dropdown-btn, .qty-btn').forEach(element => {
-                    element.addEventListener('mouseenter', () => element.style.transform = 'scale(1.05)');
-                    element.addEventListener('mouseleave', () => element.style.transform = 'scale(1)');
-                });
+                const addHoverEffects = (selector) => {
+                    document.querySelectorAll(selector).forEach(element => {
+                        element.addEventListener('mouseenter', () => element.style.transform = 'scale(1.05)');
+                        element.addEventListener('mouseleave', () => element.style.transform = 'scale(1)');
+                    });
+                };
+                addHoverEffects('.dropdown-btn, .qty-btn');
 
                 // Save/Delete functionality
                 const initSaveDelete = () => {
@@ -770,35 +831,43 @@
                     alert('Proceeding to checkout!');
                 });
 
-                // Card form functionality
-                const showDebitCard = () => {
+                // Form navigation functionality
+                const showForm = (formElement) => {
                     utils.hide(elements.profileContentContainer);
-                    utils.show(elements.debitCard, 'flex');
+                    utils.hide(elements.debitCard);
+                    utils.hide(elements.personalInfo);
+                    utils.show(formElement, 'flex');
                 };
 
                 const showProfileContent = () => {
                     utils.show(elements.profileContentContainer);
                     utils.hide(elements.debitCard);
+                    utils.hide(elements.personalInfo);
                 };
 
-                utils.addEvent(elements.addNewCardBtn, 'click', (e) => {
-                    e.preventDefault();
-                    showDebitCard();
-                });
+                // Form event listeners
+                const formEvents = [
+                    { element: elements.addNewCardBtn, action: () => showForm(elements.debitCard) },
+                    { element: elements.personalInfoBtn, action: () => showForm(elements.personalInfo) },
+                    { element: elements.backBtn, action: showProfileContent },
+                    { element: elements.backLinkBtn, action: showProfileContent },
+                    { element: elements.personalInfoBackBtn, action: showProfileContent },
+                    { element: elements.personalInfoCancelBtn, action: showProfileContent }
+                ];
 
-                utils.addEvent(elements.backBtn, 'click', (e) => {
-                    e.preventDefault();
-                    showProfileContent();
-                });
-
-                utils.addEvent(elements.backLinkBtn, 'click', (e) => {
-                    e.preventDefault();
-                    showProfileContent();
+                formEvents.forEach(({ element, action }) => {
+                    utils.addEvent(element, 'click', (e) => {
+                        e.preventDefault();
+                        action();
+                    });
                 });
 
                 // Initialize all functionality
-                initQuantitySelector();
-                initSaveDelete();
+                const initAll = () => {
+                    initQuantitySelector();
+                    initSaveDelete();
+                };
+                initAll();
             });
         </script>
 </body>

@@ -229,18 +229,18 @@ body {
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
 }
 .profile-header .header-content img {
-  width: 400px;
-  height: 300px;
+  width: 35%;
+  height: 35%;
 
   object-fit: contain;
   border-radius: 10px;
 }
 .profile-header .header-content a {
-  width: 400px;
-  height: 200px;
+  width: 25%;
+  height: 25%;
   object-fit: contain;
   border-radius: 10px;
   border: 1px dashed #d2d1d6;
@@ -357,6 +357,104 @@ body {
 .profile-content-container {
   display: block;
 }
+.Personal-info {
+  width: 100%;
+  height: auto;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  margin: 0 auto;
+}
+
+.Personal-info .back {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  bottom: 92%;
+  margin: 0 auto;
+}
+
+.add-card-form {
+  margin-top: 10%;
+}
+.Personal-info .back a {
+  text-decoration: none;
+  color: #1a162e;
+  font-size: 1.4rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+.Personal-info .back a img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+
+.Personal-info .back a span {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #1a162e;
+}
+.checkbox-group-info {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-right: 3%;
+}
+.Personal-info .form-actions-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.Personal-info .form-actions-info .cancel-btn {
+  gap: 10px;
+  border: none;
+  background-color: #f6f6f6;
+  color: #1a162e;
+  font-size: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+.Personal-info .form-actions-info .save-card-btn {
+  border-radius: 30px;
+  background-color: #ffb700;
+  color: #1a162e;
+  font-size: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+  border: none;
+}
+.Personal-info .form-actions-info .save-card-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+  opacity: 0.8;
+}
 
 .debit-card {
   width: 100%;
@@ -416,7 +514,7 @@ body {
   justify-content: center;
   margin-top: 8%;
 }
-.debit-card .debit-card-content form {
+form {
   width: 100%;
   height: auto;
   display: flex;
@@ -424,7 +522,7 @@ body {
   justify-content: center;
   flex-direction: column;
 }
-.debit-card .debit-card-content form .form-row {
+form .form-row {
   width: 100%;
   height: auto;
   display: flex;
@@ -433,7 +531,7 @@ body {
   gap: 10px;
   margin-bottom: 30px;
 }
-.debit-card .debit-card-content form .form-group {
+form .form-group {
   width: 100%;
   height: auto;
   display: flex;
@@ -443,13 +541,13 @@ body {
   gap: 10px;
   margin-left: 30px;
 }
-.debit-card .debit-card-content form .form-group label {
+form .form-group label {
   font-size: 1.8rem;
   line-height: 2.5rem;
   font-weight: 500;
   color: #1a162e;
 }
-.debit-card .debit-card-content form .form-group input {
+form .form-group input {
   width: 100%;
   height: auto;
   display: flex;
@@ -467,7 +565,7 @@ body {
   outline: none;
 }
 
-.debit-card .debit-card-content form .checkbox-group {
+form .checkbox-group {
   width: 100%;
   height: auto;
   display: flex;
@@ -476,31 +574,27 @@ body {
   gap: 10px;
   margin-left: 3%;
 }
-.debit-card .debit-card-content form .checkbox-group span {
+form .checkbox-group span {
   font-size: 1.8rem;
   line-height: 2.6rem;
   font-weight: 500;
   color: #1a162e;
 }
-.debit-card .debit-card-content form .checkbox-group .checkbox-wrapper {
+form .checkbox-group .checkbox-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   /* gap: 10px; */
 }
-.debit-card .debit-card-content form .checkbox-group .checkbox-wrapper input {
+form .checkbox-group .checkbox-wrapper input {
   width: 20px;
   height: 20px;
   object-fit: contain;
   accent-color: #1a162e;
   cursor: pointer;
 }
-.debit-card
-  .debit-card-content
-  form
-  .checkbox-group
-  .checkbox-wrapper
-  .checkbox-text {
+
+form .checkbox-group .checkbox-wrapper .checkbox-text {
   font-size: 1.5rem;
   line-height: 2.2rem;
   font-weight: 500;
@@ -508,7 +602,7 @@ body {
   margin-left: 10px;
   cursor: pointer;
 }
-.debit-card .debit-card-content form .form-actions {
+form .form-actions {
   width: 100%;
   height: auto;
   display: flex;
@@ -517,7 +611,7 @@ body {
   gap: 10px;
   margin-top: 20px;
 }
-.debit-card .debit-card-content form .form-actions .cancel-btn {
+form .form-actions .cancel-btn {
   gap: 10px;
   border: none;
   background-color: #f6f6f6;
@@ -530,7 +624,7 @@ body {
   border-radius: 30px;
 }
 
-.debit-card .debit-card-content form .form-actions .save-card-btn {
+form .form-actions .save-card-btn {
   border-radius: 30px;
   background-color: #ffb700;
   color: #1a162e;
@@ -541,7 +635,7 @@ body {
   padding: 10px 20px;
   border: none;
 }
-.debit-card .debit-card-content form .form-actions .save-card-btn:hover {
+form .form-actions .save-card-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
   opacity: 0.8;
@@ -624,27 +718,27 @@ body {
     font-size: 1.6rem;
   }
 
-  .debit-card .debit-card-content form .form-row {
+  form .form-row {
     flex-direction: column;
     gap: 20px;
     margin-bottom: 20px;
   }
 
-  .debit-card .debit-card-content form .form-group {
+  form .form-group {
     margin-left: 0;
   }
 
-  .debit-card .debit-card-content form .form-group input {
+  form .form-group input {
     padding: 12px 16px;
     font-size: 1.6rem;
   }
 
-  .debit-card .form-actions {
+  form .form-actions {
     flex-direction: column;
     gap: 10px;
   }
 
-  .debit-card .cancel-btn,
+  form .cancel-btn,
   .debit-card .save-card-btn {
     width: 100%;
     text-align: center;
@@ -725,20 +819,20 @@ body {
     font-size: 1.4rem;
   }
 
-  .debit-card .debit-card-content form .form-group label {
+  form .form-group label {
     font-size: 1.6rem;
   }
 
-  .debit-card .debit-card-content form .form-group input {
+  form .form-group input {
     padding: 10px 12px;
     font-size: 1.4rem;
   }
 
-  .debit-card .checkbox-group span {
+  form .checkbox-group span {
     font-size: 1.4rem;
   }
 
-  .debit-card .checkbox-text {
+  form .checkbox-text {
     font-size: 1.2rem;
   }
 
@@ -748,9 +842,22 @@ body {
     justify-content: center;
     gap: 10px;
   }
-  .header-content img {
-    width: 100%;
-    height: 100%;
+  .profile-header .header-content img {
+    width: 600px;
+    height: auto;
+
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  .profile-header .header-content a {
+    width: 400px;
+    height: 230px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  .profile-header .header-content a img {
+    width: 10%;
+    height: 10%;
     object-fit: contain;
     border-radius: 10px;
   }

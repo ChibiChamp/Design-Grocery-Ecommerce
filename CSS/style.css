@@ -1456,12 +1456,13 @@ body {
 
 .cart-modal .cart-content::before {
   content: "";
+  padding: 30px 0 0 10px;
   position: absolute;
-  top: -22px;
-  right: 10px;
+  top: -32px;
+  right: 20px;
   width: 15px;
   height: 35px;
-  background: white;
+  background: transparent;
   transform: rotate(90deg);
   border-radius: 2px;
 }
