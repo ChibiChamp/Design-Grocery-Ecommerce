@@ -1,763 +1,923 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./favicon.ico/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./favicon.ico/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./favicon.ico/apple-icon-72x72.png"
+    />
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon.ico/" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./favicon.ico/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./favicon.ico/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./favicon.ico/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./favicon.ico/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon.ico/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./favicon.ico/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon.ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./favicon.ico/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon.ico/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon.ico//manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
     <title>Grocery Ecommerce Templates</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="header-container">
-            <div class="header-left-container">
-                <div class="header-left">
-                    <button class="mobile-menu-btn">
-                        <label for="menu-toggle">
-                            <img src="./icon/Document.svg" alt="Hamburger Menu">
-                        </label>
-                    </button>
-                    <a href="./index.html" class="header-logo">
-                        <div class="logo-icon">
-                            <img class="icon-logo" src="./icon/Icon.svg" alt="Icon">
-                        </div>
-                        <span>grocerymart</span>
-                    </a>
-                </div>
-                <!-- end of header-left -->
+      <div class="header-container">
+        <div class="header-left-container">
+          <div class="header-left">
+            <button class="mobile-menu-btn">
+              <label for="menu-toggle">
+                <img src="./icon/Document.svg" alt="Hamburger Menu" />
+              </label>
+            </button>
+            <a href="./index.html" class="header-logo">
+              <div class="logo-icon">
+                <img class="icon-logo" src="./icon/Icon.svg" alt="Icon" />
+              </div>
+              <span>grocerymart</span>
+            </a>
+          </div>
+          <!-- end of header-left -->
 
-                <input type="checkbox" id="menu-toggle" hidden />
-                <div class="overlay"></div>
-                <nav class="nav">
-
-                    <ul class="nav-list">
-                        <div class="menu">
-                            <label class="mobile-menu-btn">
-                                <img src="./icon/Arrow - Left.svg" alt="Menu">
-                            </label>
-                        </div>
-                        <div class="mobile-menu-btn">
-                            <div class="menu-card">
-                                <a href="#">
-                                    <img src="./icon/Buy.svg" alt="Card">
-                                    <span>Card</span>
-                                </a>
-                            </div>
-                            <div class="menu-card">
-                                <a href="#">
-                                    <img src="./icon/Heart.svg" alt="Favorite">
-                                    <span>Favorite</span>
-                                </a>
-                            </div>
-                        </div>
-                        <li class="nav-item"><a href="#">Departments<img src="./icon/Arrow - Down 2.svg" alt="Arrow"
-                                    class="arrow-down"></a>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-content">
-                                    <div class="dropdown-column">
-                                        <h3 class="dropdown-title">All Departments</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Savings & Featured Shops</a></li>
-                                            <li><a href="#" class="highlighted">Electronics</a></li>
-                                            <li><a href="#">Clothing, Shoes & Accessories</a></li>
-                                            <li><a href="#">Home, Furniture & Appliances</a></li>
-                                            <li><a href="#">Toys & Video Games</a></li>
-                                            <li><a href="#">Home Improvement</a></li>
-                                            <li><a href="#">Baby</a></li>
-                                            <li><a href="#">Household Essentials</a></li>
-                                            <li><a href="#">Personal Care</a></li>
-                                            <li><a href="#">Patio & Garden</a></li>
-                                            <li><a href="#">Sports & Outdoors</a></li>
-                                            <li><a href="#">Gift Cards</a></li>
-                                            <li><a href="#">Auto, Tires and Industrial</a></li>
-                                            <li><a href="#">Movies, Music & Books</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h3 class="dropdown-title">TV & Video</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Shop all TVs</a></li>
-                                            <li><a href="#">TVs by Size</a></li>
-                                            <li><a href="#">Smart TVs</a></li>
-                                            <li><a href="#">Roku TVs</a></li>
-                                            <li><a href="#">Streaming</a></li>
-                                            <li><a href="#">TV Mounts & Accessories</a></li>
-                                            <li><a href="#">DVD & Blu-Ray Players</a></li>
-                                        </ul>
-                                        <h3 class="dropdown-title">Wearable Technology</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Galaxy Watch</a></li>
-                                            <li><a href="#">Apple Watch</a></li>
-                                            <li><a href="#">Fitness Trackers</a></li>
-                                            <li><a href="#">Virtual Reality</a></li>
-                                            <li><a href="#">Headphones</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h3 class="dropdown-title">Computers</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Shop All Computers</a></li>
-                                            <li><a href="#">Laptops</a></li>
-                                            <li><a href="#">PC Gaming</a></li>
-                                            <li><a href="#">Monitors</a></li>
-                                            <li><a href="#">Chromebook</a></li>
-                                            <li><a href="#">Printers & Ink</a></li>
-                                            <li><a href="#">Computer Accessories</a></li>
-                                            <li><a href="#">Desktops</a></li>
-                                            <li><a href="#">Tax Software</a></li>
-                                            <li><a href="#">Computer Software</a></li>
-                                            <li><a href="#">PC Finder</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h3 class="dropdown-title">Savings</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Tech Savings</a></li>
-                                            <li><a href="#">Overstock Savings</a></li>
-                                            <li><a href="#">Tech Rollbacks</a></li>
-                                        </ul>
-                                        <h3 class="dropdown-title">Cell Phones</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Wireless Deals</a></li>
-                                            <li><a href="#">5G Phones</a></li>
-                                            <li><a href="#">Prepaid Phones & Plans</a></li>
-                                            <li><a href="#">Refurbished Phones</a></li>
-                                            <li><a href="#">iPhone Accessories</a></li>
-                                            <li><a href="#">Cases & Screen Protectors</a></li>
-                                            <li><a href="#">Walmart Protection Plan</a></li>
-                                            <li><a href="#">Unlocked Phones</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item"><a href="#">Grocery<img src="./icon/Arrow - Down 2.svg" alt="Arrow"
-                                    class="arrow-down"></a>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-content">
-                                    <div class="dropdown-column">
-                                        <h3 class="dropdown-title">Fresh Produce</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Fruits</a></li>
-                                            <li><a href="#">Vegetables</a></li>
-                                            <li><a href="#">Organic Produce</a></li>
-                                            <li><a href="#">Fresh Herbs</a></li>
-                                        </ul>
-                                        <h3 class="dropdown-title">Meat & Seafood</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Beef</a></li>
-                                            <li><a href="#">Chicken</a></li>
-                                            <li><a href="#">Pork</a></li>
-                                            <li><a href="#">Seafood</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h3 class="dropdown-title">Dairy & Eggs</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Milk</a></li>
-                                            <li><a href="#">Cheese</a></li>
-                                            <li><a href="#">Yogurt</a></li>
-                                            <li><a href="#">Eggs</a></li>
-                                            <li><a href="#">Butter & Margarine</a></li>
-                                        </ul>
-                                        <h3 class="dropdown-title">Bakery</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Bread</a></li>
-                                            <li><a href="#">Pastries</a></li>
-                                            <li><a href="#">Cakes</a></li>
-                                            <li><a href="#">Cookies</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h3 class="dropdown-title">Pantry Staples</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Rice & Grains</a></li>
-                                            <li><a href="#">Pasta & Noodles</a></li>
-                                            <li><a href="#">Canned Goods</a></li>
-                                            <li><a href="#">Spices & Seasonings</a></li>
-                                            <li><a href="#">Cooking Oils</a></li>
-                                        </ul>
-                                        <h3 class="dropdown-title">Beverages</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Coffee & Tea</a></li>
-                                            <li><a href="#">Juices</a></li>
-                                            <li><a href="#">Soft Drinks</a></li>
-                                            <li><a href="#">Water</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h3 class="dropdown-title">Frozen Foods</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Frozen Meals</a></li>
-                                            <li><a href="#">Ice Cream</a></li>
-                                            <li><a href="#">Frozen Vegetables</a></li>
-                                            <li><a href="#">Frozen Fruits</a></li>
-                                        </ul>
-                                        <h3 class="dropdown-title">Specialty</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Gluten-Free</a></li>
-                                            <li><a href="#">Organic</a></li>
-                                            <li><a href="#">International Foods</a></li>
-                                            <li><a href="#">Health & Wellness</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item"><a href="#">Beauty<img src="./icon/Arrow - Down 2.svg" alt="Arrow"
-                                    class="arrow-down"></a>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-content">
-                                    <div class="dropdown-column">
-                                        <h3 class="dropdown-title">Skincare</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Face Cleansers</a></li>
-                                            <li><a href="#">Moisturizers</a></li>
-                                            <li><a href="#">Serums & Treatments</a></li>
-                                            <li><a href="#">Sunscreen</a></li>
-                                            <li><a href="#">Eye Care</a></li>
-                                        </ul>
-                                        <h3 class="dropdown-title">Makeup</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Foundation</a></li>
-                                            <li><a href="#">Lipstick & Lip Gloss</a></li>
-                                            <li><a href="#">Eye Makeup</a></li>
-                                            <li><a href="#">Blush & Bronzer</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h3 class="dropdown-title">Hair Care</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Shampoo & Conditioner</a></li>
-                                            <li><a href="#">Hair Styling</a></li>
-                                            <li><a href="#">Hair Treatments</a></li>
-                                            <li><a href="#">Hair Tools</a></li>
-                                        </ul>
-                                        <h3 class="dropdown-title">Fragrance</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Women's Perfume</a></li>
-                                            <li><a href="#">Men's Cologne</a></li>
-                                            <li><a href="#">Body Sprays</a></li>
-                                            <li><a href="#">Gift Sets</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h3 class="dropdown-title">Personal Care</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Oral Care</a></li>
-                                            <li><a href="#">Body Care</a></li>
-                                            <li><a href="#">Hand & Foot Care</a></li>
-                                            <li><a href="#">Deodorant & Antiperspirant</a></li>
-                                        </ul>
-                                        <h3 class="dropdown-title">Tools & Accessories</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Makeup Brushes</a></li>
-                                            <li><a href="#">Mirrors</a></li>
-                                            <li><a href="#">Beauty Bags</a></li>
-                                            <li><a href="#">Nail Care</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h3 class="dropdown-title">Men's Grooming</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Shaving</a></li>
-                                            <li><a href="#">Men's Skincare</a></li>
-                                            <li><a href="#">Men's Hair Care</a></li>
-                                            <li><a href="#">Grooming Tools</a></li>
-                                        </ul>
-                                        <h3 class="dropdown-title">Health & Wellness</h3>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">Vitamins & Supplements</a></li>
-                                            <li><a href="#">Natural & Organic</a></li>
-                                            <li><a href="#">Bath & Body</a></li>
-                                            <li><a href="#">Aromatherapy</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- end of nav-list -->
-            </div>
-
-            <div class="header-right-container">
-                <div class="search">
-                    <a href="#">
-                        <img src="./icon/Search.svg" alt="Search">
-                    </a>
-                </div>
-                <!-- end of search -->
-
-                <div class="header-right">
-                    <div class="heart-section">
-                        <img class="heart-icon" src="./icon/Heart.svg" alt="Heart">
-                        <span>03</span>
+          <input type="checkbox" id="menu-toggle" hidden />
+          <div class="overlay"></div>
+          <nav class="nav">
+            <ul class="nav-list">
+              <div class="menu">
+                <label class="mobile-menu-btn">
+                  <img src="./icon/Arrow - Left.svg" alt="Menu" />
+                </label>
+              </div>
+              <!-- <div class="mobile-menu-btn"> -->
+              <li class="menu-card">
+                <a href="#">
+                  <img src="./icon/Buy.svg" alt="Card" />
+                  <span>Card</span>
+                </a>
+              </li>
+              <li class="menu-card">
+                <a href="#">
+                  <img src="./icon/Heart.svg" alt="Favorite" />
+                  <span>Favorite</span>
+                </a>
+              </li>
+              <!-- </div> -->
+              <li class="nav-item">
+                <a href="#"
+                  >Departments<img
+                    src="./icon/Arrow - Down 2.svg"
+                    alt="Arrow"
+                    class="arrow-down"
+                /></a>
+                <div class="dropdown-menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">All Departments</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Savings & Featured Shops</a></li>
+                        <li><a href="#" class="highlighted">Electronics</a></li>
+                        <li><a href="#">Clothing, Shoes & Accessories</a></li>
+                        <li><a href="#">Home, Furniture & Appliances</a></li>
+                        <li><a href="#">Toys & Video Games</a></li>
+                        <li><a href="#">Home Improvement</a></li>
+                        <li><a href="#">Baby</a></li>
+                        <li><a href="#">Household Essentials</a></li>
+                        <li><a href="#">Personal Care</a></li>
+                        <li><a href="#">Patio & Garden</a></li>
+                        <li><a href="#">Sports & Outdoors</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Auto, Tires and Industrial</a></li>
+                        <li><a href="#">Movies, Music & Books</a></li>
+                      </ul>
                     </div>
-                    <span class="heart-section-span">|</span>
-                    <div class="cart-total">
-                        <a href="#" id="cart-toggle">
-                            <img src="./icon/Buy.svg" alt="Buy">
-                            <span>$65.42</span>
-                        </a>
-
-                        <!-- Shopping Cart Modal -->
-                        <div class="cart-modal" id="cart-modal">
-                            <div class="cart-content">
-                                <div class="cart-header">
-                                    <h3>You have 3 item</h3>
-                                    <a href="#" class="see-all-link">See All</a>
-                                </div>
-
-                                <div class="cart-items">
-                                    <div class="cart-item">
-                                        <img src="./images/image - UIHUT.png" alt="Lavazza Coffee Blends"
-                                            class="item-image">
-                                        <div class="item-info">
-                                            <h4 class="item-name">Lavazza Coffee Blends</h4>
-                                            <p class="item-price">$329.00</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="cart-item">
-                                        <img src="./images/image - UIHUT1.png" alt="Coffee Beans Espresso"
-                                            class="item-image">
-                                        <div class="item-info">
-                                            <h4 class="item-name">Coffee Beans Espresso</h4>
-                                            <p class="item-price">$39.99</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="cart-item">
-                                        <img src="./images/image - UIHUT2.png" alt="Qualità Oro Mountain"
-                                            class="item-image">
-                                        <div class="item-info">
-                                            <h4 class="item-name">Qualità Oro Mountain</h4>
-                                            <p class="item-price">$47.00</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="cart-summary">
-                                    <div class="summary-row">
-                                        <span>Subtotal:</span>
-                                        <span>$415.99</span>
-                                    </div>
-                                    <div class="summary-row">
-                                        <span>Texes:</span>
-                                        <span>Free</span>
-                                    </div>
-                                    <div class="summary-row">
-                                        <span>Shipping:</span>
-                                        <span>$10.00</span>
-                                    </div>
-                                    <div class="summary-row total-row">
-                                        <span>Total Price</span>
-                                        <span>$425.99</span>
-                                    </div>
-                                </div>
-
-                                <button class="checkout-btn">Check Out All</button>
-                            </div>
-                        </div>
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">TV & Video</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Shop all TVs</a></li>
+                        <li><a href="#">TVs by Size</a></li>
+                        <li><a href="#">Smart TVs</a></li>
+                        <li><a href="#">Roku TVs</a></li>
+                        <li><a href="#">Streaming</a></li>
+                        <li><a href="#">TV Mounts & Accessories</a></li>
+                        <li><a href="#">DVD & Blu-Ray Players</a></li>
+                      </ul>
+                      <h3 class="dropdown-title">Wearable Technology</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Galaxy Watch</a></li>
+                        <li><a href="#">Apple Watch</a></li>
+                        <li><a href="#">Fitness Trackers</a></li>
+                        <li><a href="#">Virtual Reality</a></li>
+                        <li><a href="#">Headphones</a></li>
+                      </ul>
                     </div>
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">Computers</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Shop All Computers</a></li>
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">PC Gaming</a></li>
+                        <li><a href="#">Monitors</a></li>
+                        <li><a href="#">Chromebook</a></li>
+                        <li><a href="#">Printers & Ink</a></li>
+                        <li><a href="#">Computer Accessories</a></li>
+                        <li><a href="#">Desktops</a></li>
+                        <li><a href="#">Tax Software</a></li>
+                        <li><a href="#">Computer Software</a></li>
+                        <li><a href="#">PC Finder</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">Savings</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Tech Savings</a></li>
+                        <li><a href="#">Overstock Savings</a></li>
+                        <li><a href="#">Tech Rollbacks</a></li>
+                      </ul>
+                      <h3 class="dropdown-title">Cell Phones</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Wireless Deals</a></li>
+                        <li><a href="#">5G Phones</a></li>
+                        <li><a href="#">Prepaid Phones & Plans</a></li>
+                        <li><a href="#">Refurbished Phones</a></li>
+                        <li><a href="#">iPhone Accessories</a></li>
+                        <li><a href="#">Cases & Screen Protectors</a></li>
+                        <li><a href="#">Walmart Protection Plan</a></li>
+                        <li><a href="#">Unlocked Phones</a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-                <!-- end of header-right -->
-
-                <div class="user-profile">
-                    <a href="./ProfilePage/profile.html">
-                        <img src="./images/Avatar.png" alt="User Avatar" class="avatar">
-                    </a>
+              </li>
+              <li class="nav-item">
+                <a href="#"
+                  >Grocery<img
+                    src="./icon/Arrow - Down 2.svg"
+                    alt="Arrow"
+                    class="arrow-down"
+                /></a>
+                <div class="dropdown-menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">Fresh Produce</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Fruits</a></li>
+                        <li><a href="#">Vegetables</a></li>
+                        <li><a href="#">Organic Produce</a></li>
+                        <li><a href="#">Fresh Herbs</a></li>
+                      </ul>
+                      <h3 class="dropdown-title">Meat & Seafood</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Beef</a></li>
+                        <li><a href="#">Chicken</a></li>
+                        <li><a href="#">Pork</a></li>
+                        <li><a href="#">Seafood</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">Dairy & Eggs</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Milk</a></li>
+                        <li><a href="#">Cheese</a></li>
+                        <li><a href="#">Yogurt</a></li>
+                        <li><a href="#">Eggs</a></li>
+                        <li><a href="#">Butter & Margarine</a></li>
+                      </ul>
+                      <h3 class="dropdown-title">Bakery</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Bread</a></li>
+                        <li><a href="#">Pastries</a></li>
+                        <li><a href="#">Cakes</a></li>
+                        <li><a href="#">Cookies</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">Pantry Staples</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Rice & Grains</a></li>
+                        <li><a href="#">Pasta & Noodles</a></li>
+                        <li><a href="#">Canned Goods</a></li>
+                        <li><a href="#">Spices & Seasonings</a></li>
+                        <li><a href="#">Cooking Oils</a></li>
+                      </ul>
+                      <h3 class="dropdown-title">Beverages</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Coffee & Tea</a></li>
+                        <li><a href="#">Juices</a></li>
+                        <li><a href="#">Soft Drinks</a></li>
+                        <li><a href="#">Water</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">Frozen Foods</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Frozen Meals</a></li>
+                        <li><a href="#">Ice Cream</a></li>
+                        <li><a href="#">Frozen Vegetables</a></li>
+                        <li><a href="#">Frozen Fruits</a></li>
+                      </ul>
+                      <h3 class="dropdown-title">Specialty</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Gluten-Free</a></li>
+                        <li><a href="#">Organic</a></li>
+                        <li><a href="#">International Foods</a></li>
+                        <li><a href="#">Health & Wellness</a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-                <!-- end of user-profile -->
-            </div>
+              </li>
+              <li class="nav-item">
+                <a href="#"
+                  >Beauty<img
+                    src="./icon/Arrow - Down 2.svg"
+                    alt="Arrow"
+                    class="arrow-down"
+                /></a>
+                <div class="dropdown-menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">Skincare</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Face Cleansers</a></li>
+                        <li><a href="#">Moisturizers</a></li>
+                        <li><a href="#">Serums & Treatments</a></li>
+                        <li><a href="#">Sunscreen</a></li>
+                        <li><a href="#">Eye Care</a></li>
+                      </ul>
+                      <h3 class="dropdown-title">Makeup</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Foundation</a></li>
+                        <li><a href="#">Lipstick & Lip Gloss</a></li>
+                        <li><a href="#">Eye Makeup</a></li>
+                        <li><a href="#">Blush & Bronzer</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">Hair Care</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Shampoo & Conditioner</a></li>
+                        <li><a href="#">Hair Styling</a></li>
+                        <li><a href="#">Hair Treatments</a></li>
+                        <li><a href="#">Hair Tools</a></li>
+                      </ul>
+                      <h3 class="dropdown-title">Fragrance</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Women's Perfume</a></li>
+                        <li><a href="#">Men's Cologne</a></li>
+                        <li><a href="#">Body Sprays</a></li>
+                        <li><a href="#">Gift Sets</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">Personal Care</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Oral Care</a></li>
+                        <li><a href="#">Body Care</a></li>
+                        <li><a href="#">Hand & Foot Care</a></li>
+                        <li><a href="#">Deodorant & Antiperspirant</a></li>
+                      </ul>
+                      <h3 class="dropdown-title">Tools & Accessories</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Makeup Brushes</a></li>
+                        <li><a href="#">Mirrors</a></li>
+                        <li><a href="#">Beauty Bags</a></li>
+                        <li><a href="#">Nail Care</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">Men's Grooming</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Shaving</a></li>
+                        <li><a href="#">Men's Skincare</a></li>
+                        <li><a href="#">Men's Hair Care</a></li>
+                        <li><a href="#">Grooming Tools</a></li>
+                      </ul>
+                      <h3 class="dropdown-title">Health & Wellness</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Vitamins & Supplements</a></li>
+                        <li><a href="#">Natural & Organic</a></li>
+                        <li><a href="#">Bath & Body</a></li>
+                        <li><a href="#">Aromatherapy</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <!-- end of nav-list -->
         </div>
+
+        <div class="header-right-container">
+          <div class="search">
+            <a href="#">
+              <img src="./icon/Search.svg" alt="Search" />
+            </a>
+          </div>
+          <!-- end of search -->
+
+          <div class="header-right">
+            <div class="heart-section">
+              <img class="heart-icon" src="./icon/Heart.svg" alt="Heart" />
+              <span>03</span>
+            </div>
+            <span class="heart-section-span">|</span>
+            <div class="cart-total">
+              <a href="#" id="cart-toggle">
+                <img src="./icon/Buy.svg" alt="Buy" />
+                <span>$65.42</span>
+              </a>
+
+              <!-- Shopping Cart Modal -->
+              <div class="cart-modal" id="cart-modal">
+                <div class="cart-content">
+                  <div class="cart-header">
+                    <h3>You have 3 item</h3>
+                    <a href="#" class="see-all-link">See All</a>
+                  </div>
+
+                  <div class="cart-items">
+                    <div class="cart-item">
+                      <img
+                        src="./images/image - UIHUT.png"
+                        alt="Lavazza Coffee Blends"
+                        class="item-image"
+                      />
+                      <div class="item-info">
+                        <h4 class="item-name">Lavazza Coffee Blends</h4>
+                        <p class="item-price">$329.00</p>
+                      </div>
+                    </div>
+
+                    <div class="cart-item">
+                      <img
+                        src="./images/image - UIHUT1.png"
+                        alt="Coffee Beans Espresso"
+                        class="item-image"
+                      />
+                      <div class="item-info">
+                        <h4 class="item-name">Coffee Beans Espresso</h4>
+                        <p class="item-price">$39.99</p>
+                      </div>
+                    </div>
+
+                    <div class="cart-item">
+                      <img
+                        src="./images/image - UIHUT2.png"
+                        alt="Qualità Oro Mountain"
+                        class="item-image"
+                      />
+                      <div class="item-info">
+                        <h4 class="item-name">Qualità Oro Mountain</h4>
+                        <p class="item-price">$47.00</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="cart-summary">
+                    <div class="summary-row">
+                      <span>Subtotal:</span>
+                      <span>$415.99</span>
+                    </div>
+                    <div class="summary-row">
+                      <span>Texes:</span>
+                      <span>Free</span>
+                    </div>
+                    <div class="summary-row">
+                      <span>Shipping:</span>
+                      <span>$10.00</span>
+                    </div>
+                    <div class="summary-row total-row">
+                      <span>Total Price</span>
+                      <span>$425.99</span>
+                    </div>
+                  </div>
+
+                  <button class="checkout-btn">Check Out All</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of header-right -->
+
+          <div class="user-profile">
+            <a href="./ProfilePage/profile.html">
+              <img src="./images/Avatar.png" alt="User Avatar" class="avatar" />
+            </a>
+          </div>
+          <!-- end of user-profile -->
+        </div>
+      </div>
     </header>
     <!-- end of header -->
     <main>
-        <div class="main-container-wrapper">
-            <div class="main-container">
-                <div class="hero-banner">
-                    <div class="hero-banner-container">
-                        <div class="hero-text">
-                            <h1>ORDER YOUR <br> FAVORITE COFFEE</h1>
-                            <div class="slider-indicator">
-                                <span>1</span>
-                                <span class="slider-dot"></span>
-                                <span>5</span>
-                                <img src="./icon/Ellipse 59.svg" alt="Slider" class="slider-dot1">
-                                <img src="./icon/Ellipse 60.svg" alt="Slider" class="slider-dot2">
-                            </div>
-                            <!-- end of slider-indicator -->
-                        </div>
-                        <!-- end of hero-text -->
+      <div class="main-container-wrapper">
+        <div class="main-container">
+          <div class="hero-banner">
+            <div class="hero-banner-container">
+              <div class="hero-text">
+                <h1>
+                  ORDER YOUR <br />
+                  FAVORITE COFFEE
+                </h1>
+                <div class="slider-indicator">
+                  <span>1</span>
+                  <span class="slider-dot"></span>
+                  <span>5</span>
+                  <img
+                    src="./icon/Ellipse 59.svg"
+                    alt="Slider"
+                    class="slider-dot1"
+                  />
+                  <img
+                    src="./icon/Ellipse 60.svg"
+                    alt="Slider"
+                    class="slider-dot2"
+                  />
+                </div>
+                <!-- end of slider-indicator -->
+              </div>
+              <!-- end of hero-text -->
 
-                        <div class="hero-images">
-                            <div class="hero-image-container">
-                                <img class="hero-image1" src="./images/mk-2-qG0ZWwd53Jk-unsplash 1.png"
-                                    alt="Coffee Bag">
-                                <img class="hero-image2" src="./images/mk-2-qG0ZWwd53Jk-unsplash02 1.png"
-                                    alt="Coffee Cup">
-                            </div>
-                            <div class="hero-banner-image">
-                                <!-- <svg class="hero-banner-image-svg1" xmlns="http://www.w3.org/2000/svg" width="309"
+              <div class="hero-images">
+                <div class="hero-image-container">
+                  <img
+                    class="hero-image1"
+                    src="./images/mk-2-qG0ZWwd53Jk-unsplash 1.png"
+                    alt="Coffee Bag"
+                  />
+                  <img
+                    class="hero-image2"
+                    src="./images/mk-2-qG0ZWwd53Jk-unsplash02 1.png"
+                    alt="Coffee Cup"
+                  />
+                </div>
+                <div class="hero-banner-image">
+                  <!-- <svg class="hero-banner-image-svg1" xmlns="http://www.w3.org/2000/svg" width="309"
                                 height="159" viewBox="0 0 309 159" fill="none">
                                 <path d="M0 41.2389V0L309 159H219.442L0 41.2389Z" fill="#D9F2F5" />
                             </svg> -->
-                                <svg class="hero-banner-image-svg2" xmlns="http://www.w3.org/2000/svg" width="522"
-                                    height="335" viewBox="0 0 522 335" fill="none">
-                                    <path
-                                        d="M522 315V0L0 175.765V217.089L219.65 335H502C513.046 335 522 326.046 522 315Z"
-                                        fill="#F1FEFF" />
-                                </svg>
-                            </div>
-                            <!-- end of hero-banner-image -->
-                        </div>
-                        <!-- end of hero-images -->
-                    </div>
-                    <!-- end of hero-banner-container -->
+                  <svg
+                    class="hero-banner-image-svg2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="522"
+                    height="335"
+                    viewBox="0 0 522 335"
+                    fill="none"
+                  >
+                    <path
+                      d="M522 315V0L0 175.765V217.089L219.65 335H502C513.046 335 522 326.046 522 315Z"
+                      fill="#F1FEFF"
+                    />
+                  </svg>
                 </div>
-                <!-- end of hero-banner -->
-
-                <div class="browse-categories">
-                    <div class="container-title">
-                        <h2>Browse Categories</h2>
-                    </div>
-                    <!-- end of container-title -->
-                    <div class="browse-content">
-                        <div class="browse-item">
-                            <img src="./images/image 82.png" alt="Browse Item">
-                            <div class="browse-item-info">
-                                <h3>$24 - $150</h3>
-                                <p>New sumatra mandeling coffe blend</p>
-                            </div>
-                        </div>
-                        <!-- end of browse-item -->
-                        <div class="browse-item">
-                            <img src="./images/image 83.png" alt="Browse Item">
-                            <div class="browse-item-info">
-                                <h3>$37 - $160</h3>
-                                <p>Espresso arabica and robusta beans</p>
-                            </div>
-                        </div>
-                        <!-- end of browse-item -->
-                        <div class="browse-item">
-                            <img src="./images/image 84.2.png" alt="Browse Item">
-                            <div class="browse-item-info">
-                                <h3>$32 - $160</h3>
-                                <p>Lavazza top class whole bean coffee blend</p>
-                            </div>
-                        </div>
-                        <!-- end of browse-item -->
-                    </div>
-                    <!-- end of browse-content -->
-                </div>
-                <!-- end of browse-categories -->
-
-                <div class="Total-products">
-                    <div class="container-title">
-                        <h2>Total LavAzza 1320</h2>
-                        <div class="filter-section" id="filter-btn">
-                            <span>Filter</span>
-                            <img src="./icon/Filter.svg" alt="Filter">
-                        </div>
-                    </div>
-                    <!-- end of container-title -->
-                    <div class="Total-products-content">
-                        <div class="product-card">
-                            <a href="./ProductPage/ProductPage.html">
-                                <div class="product-image">
-                                    <img src="./images/image - UIHUT.png" alt="Coffee Beans">
-                                    <a class="favorite-btn">
-                                        <img src="./icon/Heart.svg" alt="Heart">
-                                    </a>
-                                </div>
-                                <div class="product-info">
-                                    <h3>Coffee Beans - Espresso Arabica and Robusta Beans</h3>
-                                    <p class="brand">Lavazza</p>
-                                    <div class="rating">
-                                        <div class="rating-price">
-                                            <p>$53.00</p>
-                                        </div>
-                                        <div class="rating-star">
-                                            <img src="./icon/Star.svg" alt="Star" class="star-icon">
-                                            <span>4.5</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- end of product-card -->
-                        <div class="product-card">
-                            <a href="./ProductPage/ProductPage.html">
-                                <div class="product-image">
-                                    <img src="./images/image - UIHUT1.png" alt="Coffee Beans">
-                                    <a class="favorite-btn">
-                                        <img src="./icon/Heart.svg" alt="Heart">
-                                    </a>
-                                </div>
-                                <div class="product-info">
-                                    <h3>Lavazza Coffee Blends - Try the Italian Espresso</h3>
-                                    <p class="brand">Lavazza</p>
-                                    <div class="rating">
-                                        <div class="rating-price">
-                                            <p>$53.00</p>
-                                        </div>
-                                        <div class="rating-star">
-                                            <img src="./icon/Star.svg" alt="Star" class="star-icon">
-                                            <span>3.4</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- end of product-card -->
-                        <div class="product-card">
-                            <a href="./ProductPage/ProductPage.html">
-                                <div class="product-image">
-                                    <img src="./images/image - UIHUT2.png" alt="Coffee Beans">
-                                    <a class="favorite-btn">
-                                        <img src="./icon/Heart-active.svg" alt="Heart">
-                                    </a>
-                                </div>
-                                <div class="product-info">
-                                    <h3>Lavazza - Caffè Espresso Black Tin - Ground coffee</h3>
-                                    <p class="brand">welikecoffee</p>
-                                    <div class="rating">
-                                        <div class="rating-price">
-                                            <p>$99.99</p>
-                                        </div>
-                                        <div class="rating-star">
-                                            <img src="./icon/Star.svg" alt="Star" class="star-icon">
-                                            <span>5.0</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- end of product-card -->
-                        <div class="product-card">
-                            <a href="./ProductPage/ProductPage.html">
-                                <div class="product-image">
-                                    <img src="./images/image - UIHUT3.png" alt="Coffee Beans">
-                                    <a class="favorite-btn">
-                                        <img src="./icon/Heart.svg" alt="Heart">
-                                    </a>
-                                </div>
-                                <div class="product-info">
-                                    <h3>Qualità Oro Mountain Grown - Espresso Coffee Beans</h3>
-                                    <p class="brand">Lavazza</p>
-                                    <div class="rating">
-                                        <div class="rating-price">
-                                            <p>$38.65</p>
-                                        </div>
-                                        <div class="rating-star">
-                                            <img src="./icon/Star.svg" alt="Star" class="star-icon">
-                                            <span>4.4</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- end of product-card -->
-
-                    </div>
-                    <!-- end of Total-products-content -->
-                </div>
-                <!-- end of Total-products -->
-
-                <!-- Filter Modal -->
-                <div class="filter-modal" id="filter-modal">
-                    <div class="filter-overlay"></div>
-                    <div class="filter-content">
-                        <div class="filter-header">
-                            <h2>Filter</h2>
-                            <button class="close-filter" id="close-filter">&times;</button>
-                        </div>
-
-                        <div class="filter-body">
-                            <div class="filter-column">
-                                <h3>Price</h3>
-                                <div class="price-range">
-                                    <div class="range-slider">
-                                        <input type="range" id="price-min" min="0" max="200" value="30"
-                                            class="range-input">
-                                        <input type="range" id="price-max" min="0" max="200" value="100"
-                                            class="range-input">
-                                    </div>
-                                    <div class="price-inputs">
-                                        <div class="price-input-group">
-                                            <label>Minimum</label>
-                                            <input type="text" id="min-price" value="$30.00" readonly>
-                                        </div>
-                                        <div class="price-input-group">
-                                            <label>Maximum</label>
-                                            <input type="text" id="max-price" value="$100.00" readonly>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="filter-column">
-                                <h3>Size/Weight</h3>
-                                <div class="size-weight">
-                                    <div class="size-dropdowns">
-                                        <select class="size-select">
-                                            <option value="500g">500g</option>
-                                            <option value="250g">250g</option>
-                                            <option value="1kg">1kg</option>
-                                            <option value="2kg">2kg</option>
-                                        </select>
-                                        <select class="unit-select">
-                                            <option value="gram">Gram</option>
-                                            <option value="kg">Kilogram</option>
-                                            <option value="lb">Pound</option>
-                                        </select>
-                                    </div>
-                                    <div class="size-buttons">
-                                        <button class="size-btn">Small</button>
-                                        <button class="size-btn">Medium</button>
-                                        <button class="size-btn">Large</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="filter-column">
-                                <h3>Brand</h3>
-                                <div class="brand-filter">
-                                    <div class="brand-search">
-                                        <input type="text" placeholder="Search brand name" class="brand-input">
-                                        <img src="./icon/Search.svg" alt="Search" class="search-icon">
-                                    </div>
-                                    <div class="brand-buttons">
-                                        <button class="brand-btn">Lavazza</button>
-                                        <button class="brand-btn">Nescafe</button>
-                                        <button class="brand-btn">Starbucks</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="filter-footer">
-                            <button class="cancel-btn" id="cancel-filter">Cancel</button>
-                            <button class="show-result-btn" id="show-result">Show Result</button>
-                        </div>
-                    </div>
-                </div>
+                <!-- end of hero-banner-image -->
+              </div>
+              <!-- end of hero-images -->
             </div>
-            <!-- end of main-container -->
+            <!-- end of hero-banner-container -->
+          </div>
+          <!-- end of hero-banner -->
 
-            <!-- Product Page -->
-            <div class="product-page">
-                <div class="product-page-container">
-                    <div class="product-page-header">
-
-                    </div>
-                </div>
+          <div class="browse-categories">
+            <div class="container-title">
+              <h2>Browse Categories</h2>
             </div>
+            <!-- end of container-title -->
+            <div class="browse-content">
+              <div class="browse-item">
+                <img src="./images/image 82.png" alt="Browse Item" />
+                <div class="browse-item-info">
+                  <h3>$24 - $150</h3>
+                  <p>New sumatra mandeling coffe blend</p>
+                </div>
+              </div>
+              <!-- end of browse-item -->
+              <div class="browse-item">
+                <img src="./images/image 83.png" alt="Browse Item" />
+                <div class="browse-item-info">
+                  <h3>$37 - $160</h3>
+                  <p>Espresso arabica and robusta beans</p>
+                </div>
+              </div>
+              <!-- end of browse-item -->
+              <div class="browse-item">
+                <img src="./images/image 84.2.png" alt="Browse Item" />
+                <div class="browse-item-info">
+                  <h3>$32 - $160</h3>
+                  <p>Lavazza top class whole bean coffee blend</p>
+                </div>
+              </div>
+              <!-- end of browse-item -->
+            </div>
+            <!-- end of browse-content -->
+          </div>
+          <!-- end of browse-categories -->
+
+          <div class="Total-products">
+            <div class="container-title">
+              <h2>Total LavAzza 1320</h2>
+              <div class="filter-section" id="filter-btn">
+                <span>Filter</span>
+                <img src="./icon/Filter.svg" alt="Filter" />
+              </div>
+            </div>
+            <!-- end of container-title -->
+            <div class="Total-products-content">
+              <div class="product-card">
+                <a href="./ProductPage/ProductPage.html">
+                  <div class="product-image">
+                    <img src="./images/image - UIHUT.png" alt="Coffee Beans" />
+                    <a class="favorite-btn">
+                      <img src="./icon/Heart.svg" alt="Heart" />
+                    </a>
+                  </div>
+                  <div class="product-info">
+                    <h3>Coffee Beans - Espresso Arabica and Robusta Beans</h3>
+                    <p class="brand">Lavazza</p>
+                    <div class="rating">
+                      <div class="rating-price">
+                        <p>$53.00</p>
+                      </div>
+                      <div class="rating-star">
+                        <img
+                          src="./icon/Star.svg"
+                          alt="Star"
+                          class="star-icon"
+                        />
+                        <span>4.5</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- end of product-card -->
+              <div class="product-card">
+                <a href="./ProductPage/ProductPage.html">
+                  <div class="product-image">
+                    <img src="./images/image - UIHUT1.png" alt="Coffee Beans" />
+                    <a class="favorite-btn">
+                      <img src="./icon/Heart.svg" alt="Heart" />
+                    </a>
+                  </div>
+                  <div class="product-info">
+                    <h3>Lavazza Coffee Blends - Try the Italian Espresso</h3>
+                    <p class="brand">Lavazza</p>
+                    <div class="rating">
+                      <div class="rating-price">
+                        <p>$53.00</p>
+                      </div>
+                      <div class="rating-star">
+                        <img
+                          src="./icon/Star.svg"
+                          alt="Star"
+                          class="star-icon"
+                        />
+                        <span>3.4</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- end of product-card -->
+              <div class="product-card">
+                <a href="./ProductPage/ProductPage.html">
+                  <div class="product-image">
+                    <img src="./images/image - UIHUT2.png" alt="Coffee Beans" />
+                    <a class="favorite-btn active">
+                      <img src="./icon/Heart-active.svg" alt="Heart" />
+                    </a>
+                  </div>
+                  <div class="product-info">
+                    <h3>Lavazza - Caffè Espresso Black Tin - Ground coffee</h3>
+                    <p class="brand">welikecoffee</p>
+                    <div class="rating">
+                      <div class="rating-price">
+                        <p>$99.99</p>
+                      </div>
+                      <div class="rating-star">
+                        <img
+                          src="./icon/Star.svg"
+                          alt="Star"
+                          class="star-icon"
+                        />
+                        <span>5.0</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- end of product-card -->
+              <div class="product-card">
+                <a href="./ProductPage/ProductPage.html">
+                  <div class="product-image">
+                    <img src="./images/image - UIHUT3.png" alt="Coffee Beans" />
+                    <a class="favorite-btn">
+                      <img src="./icon/Heart.svg" alt="Heart" />
+                    </a>
+                  </div>
+                  <div class="product-info">
+                    <h3>Qualità Oro Mountain Grown - Espresso Coffee Beans</h3>
+                    <p class="brand">Lavazza</p>
+                    <div class="rating">
+                      <div class="rating-price">
+                        <p>$38.65</p>
+                      </div>
+                      <div class="rating-star">
+                        <img
+                          src="./icon/Star.svg"
+                          alt="Star"
+                          class="star-icon"
+                        />
+                        <span>4.4</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- end of product-card -->
+            </div>
+            <!-- end of Total-products-content -->
+          </div>
+          <!-- end of Total-products -->
+
+          <!-- Filter Modal -->
+          <div class="filter-modal" id="filter-modal">
+            <div class="filter-overlay"></div>
+            <div class="filter-content">
+              <div class="filter-header">
+                <h2>Filter</h2>
+                <button class="close-filter" id="close-filter">&times;</button>
+              </div>
+
+              <div class="filter-body">
+                <div class="filter-column">
+                  <h3>Price</h3>
+                  <div class="price-range">
+                    <div class="range-slider">
+                      <input
+                        type="range"
+                        id="price-min"
+                        min="0"
+                        max="200"
+                        value="30"
+                        class="range-input"
+                      />
+                      <input
+                        type="range"
+                        id="price-max"
+                        min="0"
+                        max="200"
+                        value="100"
+                        class="range-input"
+                      />
+                    </div>
+                    <div class="price-inputs">
+                      <div class="price-input-group">
+                        <label>Minimum</label>
+                        <input
+                          type="text"
+                          id="min-price"
+                          value="$30.00"
+                          readonly
+                        />
+                      </div>
+                      <div class="price-input-group">
+                        <label>Maximum</label>
+                        <input
+                          type="text"
+                          id="max-price"
+                          value="$100.00"
+                          readonly
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter-column">
+                  <h3>Size/Weight</h3>
+                  <div class="size-weight">
+                    <div class="size-dropdowns">
+                      <select class="size-select">
+                        <option value="500g">500g</option>
+                        <option value="250g">250g</option>
+                        <option value="1kg">1kg</option>
+                        <option value="2kg">2kg</option>
+                      </select>
+                      <select class="unit-select">
+                        <option value="gram">Gram</option>
+                        <option value="kg">Kilogram</option>
+                        <option value="lb">Pound</option>
+                      </select>
+                    </div>
+                    <div class="size-buttons">
+                      <button class="size-btn">Small</button>
+                      <button class="size-btn">Medium</button>
+                      <button class="size-btn">Large</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter-column">
+                  <h3>Brand</h3>
+                  <div class="brand-filter">
+                    <div class="brand-search">
+                      <input
+                        type="text"
+                        placeholder="Search brand name"
+                        class="brand-input"
+                      />
+                      <img
+                        src="./icon/Search.svg"
+                        alt="Search"
+                        class="search-icon"
+                      />
+                    </div>
+                    <div class="brand-buttons">
+                      <button class="brand-btn">Lavazza</button>
+                      <button class="brand-btn">Nescafe</button>
+                      <button class="brand-btn">Starbucks</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filter-footer">
+                <button class="cancel-btn" id="cancel-filter">Cancel</button>
+                <button class="show-result-btn" id="show-result">
+                  Show Result
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- end of main-container -->
+
+        <!-- Product Page -->
+        <div class="product-page">
+          <div class="product-page-container">
+            <div class="product-page-header"></div>
+          </div>
+        </div>
+      </div>
     </main>
     <!-- end of main -->
 
-
     <script>
-        // Close menu when clicking close button or overlay
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuToggle = document.getElementById('menu-toggle');
-            const closeMenuBtn = document.querySelector('.menu .mobile-menu-btn');
-            const overlay = document.querySelector('.overlay');
+      // Close menu when clicking close button or overlay
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menu-toggle");
+        const closeMenuBtn = document.querySelector(".menu .mobile-menu-btn");
+        const overlay = document.querySelector(".overlay");
 
-            // Close menu when close button is clicked
-            if (closeMenuBtn) {
-                closeMenuBtn.addEventListener('click', function () {
-                    menuToggle.checked = false;
-                });
-            }
+        // Close menu when close button is clicked
+        if (closeMenuBtn) {
+          closeMenuBtn.addEventListener("click", function () {
+            menuToggle.checked = false;
+          });
+        }
 
-            // Close menu when overlay is clicked
-            if (overlay) {
-                overlay.addEventListener('click', function () {
-                    menuToggle.checked = false;
-                });
-            }
+        // Close menu when overlay is clicked
+        if (overlay) {
+          overlay.addEventListener("click", function () {
+            menuToggle.checked = false;
+          });
+        }
 
-            // Filter Modal Functionality
-            const filterBtn = document.getElementById('filter-btn');
-            const filterModal = document.getElementById('filter-modal');
-            const closeFilter = document.getElementById('close-filter');
-            const cancelFilter = document.getElementById('cancel-filter');
-            const showResult = document.getElementById('show-result');
-            const filterOverlay = document.querySelector('.filter-overlay');
+        // Filter Modal Functionality
+        const filterBtn = document.getElementById("filter-btn");
+        const filterModal = document.getElementById("filter-modal");
+        const closeFilter = document.getElementById("close-filter");
+        const cancelFilter = document.getElementById("cancel-filter");
+        const showResult = document.getElementById("show-result");
+        const filterOverlay = document.querySelector(".filter-overlay");
 
-            // Open filter modal
-            if (filterBtn) {
-                filterBtn.addEventListener('click', function () {
-                    filterModal.classList.add('active');
-                });
-            }
+        // Open filter modal
+        if (filterBtn) {
+          filterBtn.addEventListener("click", function () {
+            filterModal.classList.add("active");
+          });
+        }
 
-            // Close filter modal
-            function closeFilterModal() {
-                filterModal.classList.remove('active');
-            }
+        // Close filter modal
+        function closeFilterModal() {
+          filterModal.classList.remove("active");
+        }
 
-            if (closeFilter) {
-                closeFilter.addEventListener('click', closeFilterModal);
-            }
+        if (closeFilter) {
+          closeFilter.addEventListener("click", closeFilterModal);
+        }
 
-            if (cancelFilter) {
-                cancelFilter.addEventListener('click', closeFilterModal);
-            }
+        if (cancelFilter) {
+          cancelFilter.addEventListener("click", closeFilterModal);
+        }
 
-            if (filterOverlay) {
-                filterOverlay.addEventListener('click', closeFilterModal);
-            }
+        if (filterOverlay) {
+          filterOverlay.addEventListener("click", closeFilterModal);
+        }
 
-            // Show result button
-            if (showResult) {
-                showResult.addEventListener('click', function () {
-                    // Here you can add logic to apply filters
-                    console.log('Applying filters...');
-                    closeFilterModal();
-                });
-            }
+        // Show result button
+        if (showResult) {
+          showResult.addEventListener("click", function () {
+            // Here you can add logic to apply filters
+            console.log("Applying filters...");
+            closeFilterModal();
+          });
+        }
 
-            // Price range functionality
-            const priceMin = document.getElementById('price-min');
-            const priceMax = document.getElementById('price-max');
-            const minPriceDisplay = document.getElementById('min-price');
-            const maxPriceDisplay = document.getElementById('max-price');
+        // Price range functionality
+        const priceMin = document.getElementById("price-min");
+        const priceMax = document.getElementById("price-max");
+        const minPriceDisplay = document.getElementById("min-price");
+        const maxPriceDisplay = document.getElementById("max-price");
 
-            function updatePriceDisplay() {
-                if (minPriceDisplay) minPriceDisplay.value = '$' + priceMin.value + '.00';
-                if (maxPriceDisplay) maxPriceDisplay.value = '$' + priceMax.value + '.00';
-            }
+        function updatePriceDisplay() {
+          if (minPriceDisplay)
+            minPriceDisplay.value = "$" + priceMin.value + ".00";
+          if (maxPriceDisplay)
+            maxPriceDisplay.value = "$" + priceMax.value + ".00";
+        }
 
-            if (priceMin && priceMax) {
-                priceMin.addEventListener('input', updatePriceDisplay);
-                priceMax.addEventListener('input', updatePriceDisplay);
-            }
+        if (priceMin && priceMax) {
+          priceMin.addEventListener("input", updatePriceDisplay);
+          priceMax.addEventListener("input", updatePriceDisplay);
+        }
 
-            // Size button functionality
-            const sizeBtns = document.querySelectorAll('.size-btn');
-            sizeBtns.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    sizeBtns.forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
-
-            // Brand button functionality
-            const brandBtns = document.querySelectorAll('.brand-btn');
-            brandBtns.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    brandBtns.forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
+        // Size button functionality
+        const sizeBtns = document.querySelectorAll(".size-btn");
+        sizeBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            sizeBtns.forEach((b) => b.classList.remove("active"));
+            this.classList.add("active");
+          });
         });
-    </script>
-</body>
 
+        // Brand button functionality
+        const brandBtns = document.querySelectorAll(".brand-btn");
+        brandBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            brandBtns.forEach((b) => b.classList.remove("active"));
+            this.classList.add("active");
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
