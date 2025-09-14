@@ -142,6 +142,9 @@ body {
   position: relative;
   z-index: 1000;
 }
+.header-container .nav .nav-list .menu-card {
+  display: none;
+}
 .header-container .nav .nav-list .nav-item {
   list-style: none;
   transition: all 0.3s ease;
@@ -1110,13 +1113,7 @@ body {
   }
 
   .header-container .nav .nav-list .menu-card {
-    /* margin-top: 10px; */
-    /* display: block; */
-    /* background-color: #ccc; */
-    /* padding: 10px; */
     display: flex;
-    /* align-items: center; */
-    /* justify-content: space-between; */
   }
   .header-container .nav .nav-list .menu-card img {
     width: 15px;
