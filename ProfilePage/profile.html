@@ -310,8 +310,10 @@
 
                 <div class="header-right">
                     <div class="heart-section">
-                        <img class="heart-icon" src="../icon/Heart.svg" alt="Heart">
-                        <span>03</span>
+                        <a href="../Checkout/checkout.html">
+                            <img class="heart-icon" src="../icon/Heart.svg" alt="Heart" />
+                            <span>03</span>
+                        </a>
                     </div>
                     <span class="heart-section-span">|</span>
                     <div class="cart-total">
@@ -595,13 +597,13 @@
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="firstName">Card Information</label>
-                                    <input type="text" id="CardInformation" name="CardInformation"
+                                    <input type="number" id="CardInformation" name="CardInformation"
                                         placeholder="Card Information" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="lastName">Expiration Date</label>
-                                    <input type="text" id="ExpirationDate" name="ExpirationDate" placeholder="MM/YY"
+                                    <input type="number" id="ExpirationDate" name="ExpirationDate" placeholder="MM/YY"
                                         required>
                                 </div>
                             </div>
@@ -609,12 +611,12 @@
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="firstName">CVV</label>
-                                    <input type="text" id="CVV" name="CVV" placeholder="123" required>
+                                    <input type="number" id="CVV" name="CVV" placeholder="123" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="lastName">Phone Number</label>
-                                    <input type="text" id="PhoneNumber" name="PhoneNumber" placeholder="0987654321"
+                                    <input type="number" id="PhoneNumber" name="PhoneNumber" placeholder="0987654321"
                                         required>
                                 </div>
                             </div>
@@ -647,19 +649,20 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="firstName">Full name</label>
-                                <input type="text" id="firstName" name="firstName" placeholder="Imran" required>
+                                <input type="text" id="firstName" name="firstName" placeholder="Imran Khan" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="lastName">Email address</label>
-                                <input type="" id="lastName" name="lastName" placeholder="admin@uihut.com" required>
+                                <input type="email" id="lastName" name="lastName" placeholder="admin@uihut.com"
+                                    required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="firstName">Phone number</label>
-                                <input type="text" id="CardInformation" name="CardInformation"
+                                <input type="number" id="CardInformation" name="CardInformation"
                                     placeholder="+008 01234 56789" required>
                             </div>
 
@@ -669,14 +672,14 @@
                             </div>
                         </div>
 
-
-                    </form>
-                    <div class="checkbox-group-info">
-                        <div class="form-actions-info">
-                            <button type="button" class="cancel-btn" id="personalInfoCancelBtn">Cancel</button>
-                            <button type="submit" class="save-card-btn">Save Edit</button>
+                        <div class="checkbox-group-info">
+                            <div class="form-actions-info">
+                                <button type="button" class="cancel-btn" id="personalInfoCancelBtn">Cancel</button>
+                                <button type="submit" class="save-card-btn">Save Edit</button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
+
                 </div>
             </div>
             <!-- end of profile-content -->
