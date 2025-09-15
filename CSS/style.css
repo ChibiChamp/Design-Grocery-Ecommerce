@@ -626,6 +626,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 .header-container .header-right .heart-section img {
   width: 15px;
