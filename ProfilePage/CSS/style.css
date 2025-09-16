@@ -229,22 +229,28 @@ body {
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: space-around;
 }
-.profile-header .header-content img {
+.profile-header .header-content a {
   width: 35%;
   height: 35%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.profile-header .header-content a img {
+  width: 90%;
+  /* height: 35%; */
 
   object-fit: contain;
   border-radius: 10px;
 }
-.profile-header .header-content a {
+.profile-header .header-content .add-new-card-btn {
   width: 25%;
   height: 25%;
   object-fit: contain;
   border-radius: 10px;
   border: 1px dashed #d2d1d6;
-  padding: 30px 35px;
+  padding: 60px 35px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -255,7 +261,7 @@ body {
   font-weight: 500;
 }
 
-.profile-header .header-content a img {
+.profile-header .header-content .add-new-card-btn img {
   width: 25%;
   height: 25%;
   object-fit: contain;
@@ -274,6 +280,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 10px;
 }
 .body-content .body-content-item {
   width: 350px;
@@ -294,6 +301,10 @@ body {
   align-items: start;
   flex-direction: column;
 }
+.body-content .body-content-item .info p a {
+  text-decoration: none;
+  color: #1a162e;
+}
 
 .list-content .list-item {
   width: 100%;
@@ -307,6 +318,10 @@ body {
   border-radius: 10px;
   background-color: #f6f6f6;
   border-bottom: 1px solid #e5e5e5;
+}
+
+.list-content .list-item a {
+  text-decoration: none;
 }
 .list-content .list-item img {
   width: 100px;
@@ -481,9 +496,9 @@ body {
   align-items: center;
   justify-content: start;
   position: absolute;
-  top: 0;
+  top: 2%;
   left: 2%;
-  bottom: 92%;
+  bottom: 90%;
   margin: 0 auto;
 }
 .debit-card .back a {
@@ -512,7 +527,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-top: 8%; */
+  margin-top: -3%;
 }
 form {
   width: 100%;
@@ -842,20 +857,20 @@ form .form-actions .save-card-btn:hover {
     justify-content: center;
     gap: 10px;
   }
-  .profile-header .header-content img {
+  .profile-header .header-content a img {
     width: 600px;
     height: auto;
 
     object-fit: contain;
     border-radius: 10px;
   }
-  .profile-header .header-content a {
+  .profile-header .header-content .add-new-card-btn {
     width: 400px;
     height: 230px;
     object-fit: contain;
     border-radius: 10px;
   }
-  .profile-header .header-content a img {
+  .profile-header .header-content .add-new-card-btn img {
     width: 10%;
     height: 10%;
     object-fit: contain;

@@ -333,7 +333,7 @@
                                 <div class="cart-items">
                                     <div class="cart-item">
                                         <img src="../images/image - UIHUT.png" alt="Lavazza Coffee Blends"
-                                            class="item-image">
+                                            class="item-image" />
                                         <div class="item-info">
                                             <h4 class="item-name">Lavazza Coffee Blends</h4>
                                             <p class="item-price">$329.00</p>
@@ -342,7 +342,7 @@
 
                                     <div class="cart-item">
                                         <img src="../images/image - UIHUT1.png" alt="Coffee Beans Espresso"
-                                            class="item-image">
+                                            class="item-image" />
                                         <div class="item-info">
                                             <h4 class="item-name">Coffee Beans Espresso</h4>
                                             <p class="item-price">$39.99</p>
@@ -351,7 +351,7 @@
 
                                     <div class="cart-item">
                                         <img src="../images/image - UIHUT2.png" alt="Qualità Oro Mountain"
-                                            class="item-image">
+                                            class="item-image" />
                                         <div class="item-info">
                                             <h4 class="item-name">Qualità Oro Mountain</h4>
                                             <p class="item-price">$47.00</p>
@@ -378,7 +378,7 @@
                                     </div>
                                 </div>
 
-                                <button class="checkout-btn">Check Out All</button>
+                                <a href="../Checkout/checkout.html" class="checkout-btn">Check Out All</a>
                             </div>
                         </div>
                     </div>
@@ -511,15 +511,16 @@
 
                             <div class="form-group">
                                 <label for="cardnumber">Card Details</label>
-                                <input type="number" id="cardnumber" placeholder="1234 5678 9012 3456" required>
+                                <input type="number" id="cardnumber" placeholder="1234 5678 9012 3456" class="no-arrows"
+                                    required>
                             </div>
 
                             <div class="card-details-row">
                                 <div class="form-group">
-                                    <input type="number" id="expiry" placeholder="MM/YY" required>
+                                    <input type="number" id="expiry" placeholder="MM/YY" class="no-arrows" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="number" id="cvc" placeholder="CVC" required>
+                                    <input type="number" id="cvc" placeholder="CVC" class="no-arrows" required>
                                 </div>
                             </div>
                         </div>
@@ -766,14 +767,14 @@
 
                 // Checkout button functionality
                 const checkoutBtn = document.querySelector('.checkout-btn');
-                if (checkoutBtn) {
-                    checkoutBtn.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        console.log('Proceeding to checkout...');
-                        // You can add checkout logic here
-                        alert('Proceeding to checkout!');
-                    });
-                }
+                // if (checkoutBtn) {
+                //     checkoutBtn.addEventListener('click', function (e) {
+                //         e.preventDefault();
+                //         console.log('Proceeding to checkout...');
+                //         // You can add checkout logic here
+                //         alert('Proceeding to checkout!');
+                //     });
+                // }
             });
         </script>
 </body>

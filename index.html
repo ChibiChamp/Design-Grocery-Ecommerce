@@ -373,7 +373,7 @@
                   </div>
                 </div>
 
-                <button class="checkout-btn">Check Out All</button>
+                <a href="./Checkout/checkout.html" class="checkout-btn">Check Out All</a>
               </div>
             </div>
           </div>
@@ -442,27 +442,33 @@
           <!-- end of container-title -->
           <div class="browse-content">
             <div class="browse-item">
-              <img src="./images/image 82.png" alt="Browse Item" />
-              <div class="browse-item-info">
-                <h3>$24 - $150</h3>
-                <p>New sumatra mandeling coffe blend</p>
-              </div>
+              <a href="./ProductPage/ProductPage.html">
+                <img src="./images/image 82.png" alt="Browse Item" />
+                <div class="browse-item-info">
+                  <h3>$24 - $150</h3>
+                  <p>New sumatra mandeling coffe blend</p>
+                </div>
+              </a>
             </div>
             <!-- end of browse-item -->
             <div class="browse-item">
-              <img src="./images/image 83.png" alt="Browse Item" />
-              <div class="browse-item-info">
-                <h3>$37 - $160</h3>
-                <p>Espresso arabica and robusta beans</p>
-              </div>
+              <a href="./ProductPage/ProductPage.html">
+                <img src="./images/image 83.png" alt="Browse Item" />
+                <div class="browse-item-info">
+                  <h3>$37 - $160</h3>
+                  <p>Espresso arabica and robusta beans</p>
+                </div>
+              </a>
             </div>
             <!-- end of browse-item -->
             <div class="browse-item">
-              <img src="./images/image 84.2.png" alt="Browse Item" />
-              <div class="browse-item-info">
-                <h3>$32 - $160</h3>
-                <p>Lavazza top class whole bean coffee blend</p>
-              </div>
+              <a href="./ProductPage/ProductPage.html">
+                <img src="./images/image 84.2.png" alt="Browse Item" />
+                <div class="browse-item-info">
+                  <h3>$32 - $160</h3>
+                  <p>Lavazza top class whole bean coffee blend</p>
+                </div>
+              </a>
             </div>
             <!-- end of browse-item -->
           </div>
@@ -601,11 +607,11 @@
                   <div class="price-inputs">
                     <div class="price-input-group">
                       <label>Minimum</label>
-                      <input type="text" id="min-price" value="$30.00" readonly />
+                      <input type="text" id="min-price" value="$30.00" />
                     </div>
                     <div class="price-input-group">
                       <label>Maximum</label>
-                      <input type="text" id="max-price" value="$100.00" readonly />
+                      <input type="text" id="max-price" value="$100.00" />
                     </div>
                   </div>
                 </div>
@@ -735,22 +741,22 @@
       }
 
       // Price range functionality
-      const priceMin = document.getElementById("price-min");
-      const priceMax = document.getElementById("price-max");
-      const minPriceDisplay = document.getElementById("min-price");
-      const maxPriceDisplay = document.getElementById("max-price");
+      // const priceMin = document.getElementById("price-min");
+      // const priceMax = document.getElementById("price-max");
+      // const minPriceDisplay = document.getElementById("min-price");
+      // const maxPriceDisplay = document.getElementById("max-price");
 
-      function updatePriceDisplay() {
-        if (minPriceDisplay)
-          minPriceDisplay.value = "$" + priceMin.value + ".00";
-        if (maxPriceDisplay)
-          maxPriceDisplay.value = "$" + priceMax.value + ".00";
-      }
+      // function updatePriceDisplay() {
+      //   if (minPriceDisplay)
+      //     minPriceDisplay.value = "$" + priceMin.value + ".00";
+      //   if (maxPriceDisplay)
+      //     maxPriceDisplay.value = "$" + priceMax.value + ".00";
+      // }
 
-      if (priceMin && priceMax) {
-        priceMin.addEventListener("input", updatePriceDisplay);
-        priceMax.addEventListener("input", updatePriceDisplay);
-      }
+      // if (priceMin && priceMax) {
+      //   priceMin.addEventListener("input", updatePriceDisplay);
+      //   priceMax.addEventListener("input", updatePriceDisplay);
+      // }
 
       // Size button functionality
       const sizeBtns = document.querySelectorAll(".size-btn");

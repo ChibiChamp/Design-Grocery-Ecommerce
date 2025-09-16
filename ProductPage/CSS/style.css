@@ -47,6 +47,10 @@ body {
   justify-content: flex-start;
   gap: 10px;
 }
+.Product-container .product-header ul li a span:hover {
+  color: #1a162e;
+  transition: all 0.3s ease;
+}
 .Product-container .product-header ul li a {
   text-decoration: none;
   color: #333;

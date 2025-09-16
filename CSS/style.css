@@ -18,6 +18,17 @@ body {
   color: #333;
   line-height: 1.6;
 }
+/* Chỉ áp dụng cho class no-arrows */
+.no-arrows::-webkit-outer-spin-button,
+.no-arrows::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-arrows {
+  -moz-appearance: textfield;
+}
+
 .main-container-wrapper {
   width: 100%;
   height: auto;
@@ -628,7 +639,7 @@ body {
   gap: 10px;
   text-decoration: none;
   color: #333;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.4rem;
 }
 .header-container .header-right .heart-section img {
@@ -659,8 +670,13 @@ body {
 .header-container .header-right .cart-total a {
   text-decoration: none;
   color: #333;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.4rem;
+}
+
+.header-container .header-right .cart-total .checkout-btn {
+  background-color: #ff6b35;
+  color: #fff;
 }
 /* ============================================
    MAIN STYLES banner
@@ -669,7 +685,7 @@ body {
   width: 100%;
   height: auto;
   margin-top: 2%;
-  margin-bottom: 10%;
+  /* margin-bottom: 10%; */
 }
 .main-container .hero-banner {
   width: 100%;
@@ -850,10 +866,15 @@ body {
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.browse-categories .browse-content .browse-item:hover {
+.browse-categories .browse-content .browse-item a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+/* .browse-categories .browse-content .browse-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
+} */
 .browse-categories .browse-content .browse-item img {
   width: 30%;
   height: 30%;
@@ -965,6 +986,7 @@ body {
   width: 8%;
   height: 8%;
   object-fit: contain;
+  padding-top: 25px;
   position: relative;
   top: 0;
   right: -89%;
@@ -981,7 +1003,8 @@ body {
   height: 15%;
   object-fit: contain;
   position: relative;
-  top: 0;
+  padding-top: 0;
+  top: 25px;
   right: -85%;
   cursor: pointer;
 }
@@ -1198,9 +1221,7 @@ body {
     border-radius: 0;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    border-left: 3px solid #007bff;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     margin-top: 10px;
     display: none;
   }
@@ -1541,6 +1562,10 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .checkout-btn:hover {

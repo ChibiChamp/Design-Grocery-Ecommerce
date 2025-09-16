@@ -333,7 +333,7 @@
                                 <div class="cart-items">
                                     <div class="cart-item">
                                         <img src="../images/image - UIHUT.png" alt="Lavazza Coffee Blends"
-                                            class="item-image">
+                                            class="item-image" />
                                         <div class="item-info">
                                             <h4 class="item-name">Lavazza Coffee Blends</h4>
                                             <p class="item-price">$329.00</p>
@@ -342,7 +342,7 @@
 
                                     <div class="cart-item">
                                         <img src="../images/image - UIHUT1.png" alt="Coffee Beans Espresso"
-                                            class="item-image">
+                                            class="item-image" />
                                         <div class="item-info">
                                             <h4 class="item-name">Coffee Beans Espresso</h4>
                                             <p class="item-price">$39.99</p>
@@ -351,7 +351,7 @@
 
                                     <div class="cart-item">
                                         <img src="../images/image - UIHUT2.png" alt="Qualità Oro Mountain"
-                                            class="item-image">
+                                            class="item-image" />
                                         <div class="item-info">
                                             <h4 class="item-name">Qualità Oro Mountain</h4>
                                             <p class="item-price">$47.00</p>
@@ -378,7 +378,7 @@
                                     </div>
                                 </div>
 
-                                <button class="checkout-btn">Check Out All</button>
+                                <a href="../Checkout/checkout.html" class="checkout-btn">Check Out All</a>
                             </div>
                         </div>
                     </div>
@@ -480,9 +480,13 @@
                             <p>Payment methods</p>
                         </div>
                         <div class="header-content">
-                            <img src="../images/visaa.png" alt="">
-                            <img src="../images/visaa.png" alt="">
-                            <a href="#" id="addNewCardBtn">
+                            <a href="">
+                                <img src="../images/visaa.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../images/visaa.png" alt="">
+                            </a>
+                            <a href="#" class="add-new-card-btn" id="addNewCardBtn">
                                 <img src="../icon/Plus.svg" alt="">
                                 <span>Add New Card</span>
                             </a>
@@ -499,7 +503,7 @@
                                     <img src="../icon/Message.svg" alt="">
                                     <div class="info">
                                         <h4>Email Address</h4>
-                                        <p>imran@gmail.com</p>
+                                        <p><a href="mailto:imran@gmail.com">imran@gmail.com</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -509,7 +513,7 @@
                                     <img src="../icon/Calling.svg" alt="">
                                     <div class="info">
                                         <h4>Phone Number</h4>
-                                        <p>+923123456789</p>
+                                        <p><a href="tel:+923123456789">+923123456789</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -532,10 +536,14 @@
                         </div>
                         <div class="list-content">
                             <div class="list-item">
-                                <img src="../images/image - UIHUT2.png" alt="">
+                                <a href="../ProductPage/ProductPage.html">
+                                    <img src="../images/image - UIHUT2.png" alt="">
+                                </a>
                                 <div class="info">
                                     <div class="info-title">
-                                        <h3>Coffee Beans - Espresso Arabica and Robusta Beans</h3>
+                                        <a href="../ProductPage/ProductPage.html">
+                                            <h3>Coffee Beans - Espresso Arabica and Robusta Beans</h3>
+                                        </a>
                                     </div>
                                     <div class="info-price">
                                         <p>$47.00</p>
@@ -545,10 +553,14 @@
                             </div>
 
                             <div class="list-item">
-                                <img src="../images/image - UIHUT2.png" alt="">
+                                <a href="../ProductPage/ProductPage.html">
+                                    <img src="../images/image - UIHUT2.png" alt="">
+                                </a>
                                 <div class="info">
                                     <div class="info-title">
-                                        <h3>Coffee Beans - Espresso Arabica and Robusta Beans</h3>
+                                        <a href="../ProductPage/ProductPage.html">
+                                            <h3>Coffee Beans - Espresso Arabica and Robusta Beans</h3>
+                                        </a>
                                     </div>
                                     <div class="info-price">
                                         <p>$47.00</p>
@@ -558,10 +570,14 @@
                             </div>
 
                             <div class="list-item">
-                                <img src="../images/image - UIHUT2.png" alt="">
+                                <a href="../ProductPage/ProductPage.html">
+                                    <img src="../images/image - UIHUT2.png" alt="">
+                                </a>
                                 <div class="info">
                                     <div class="info-title">
-                                        <h3>Coffee Beans - Espresso Arabica and Robusta Beans</h3>
+                                        <a href="../ProductPage/ProductPage.html">
+                                            <h3>Coffee Beans - Espresso Arabica and Robusta Beans</h3>
+                                        </a>
                                     </div>
                                     <div class="info-price">
                                         <p>$47.00</p>
@@ -597,27 +613,28 @@
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="firstName">Card Information</label>
-                                    <input type="number" id="CardInformation" name="CardInformation"
+                                    <input type="number" id="CardInformation" name="CardInformation" class="no-arrows"
                                         placeholder="Card Information" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="lastName">Expiration Date</label>
                                     <input type="number" id="ExpirationDate" name="ExpirationDate" placeholder="MM/YY"
-                                        required>
+                                        class="no-arrows" required>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="firstName">CVV</label>
-                                    <input type="number" id="CVV" name="CVV" placeholder="123" required>
+                                    <input type="number" id="CVV" name="CVV" placeholder="123" class="no-arrows"
+                                        required>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="lastName">Phone Number</label>
                                     <input type="number" id="PhoneNumber" name="PhoneNumber" placeholder="0987654321"
-                                        required>
+                                        class="no-arrows" required>
                                 </div>
                             </div>
 
@@ -662,13 +679,14 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="firstName">Phone number</label>
-                                <input type="number" id="CardInformation" name="CardInformation"
+                                <input type="number" id="CardInformation" name="CardInformation" class="no-arrows"
                                     placeholder="+008 01234 56789" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="lastName">Password</label>
-                                <input type="password" id="Password" name="Password" placeholder="Password" required>
+                                <input type="password" id="Password" name="Password" placeholder="Password"
+                                    class="no-arrows" required>
                             </div>
                         </div>
 
