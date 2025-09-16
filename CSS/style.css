@@ -1002,9 +1002,10 @@ body {
   width: 15%;
   height: 15%;
   object-fit: contain;
-  position: relative;
   padding-top: 0;
-  top: 25px;
+  margin-bottom: -5%;
+  position: relative;
+  top: 0;
   right: -85%;
   cursor: pointer;
 }
