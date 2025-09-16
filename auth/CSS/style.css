@@ -197,7 +197,8 @@ body {
 
 .checkbox-wrapper {
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  justify-content: center;
   gap: 8px;
   cursor: pointer;
 }
@@ -213,6 +214,8 @@ body {
   font-size: 1.3rem;
   color: #9e9da8;
   font-weight: 400;
+  flex-wrap: wrap;
+  line-height: 1.5;
 }
 
 .recovery-link {
