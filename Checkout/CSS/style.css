@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  overscroll-behavior: none;
 }
 
 body {
@@ -17,6 +18,7 @@ body {
   background-color: #eeeeee;
   color: #333;
   line-height: 1.6;
+  overscroll-behavior: none;
 }
 .checkout-main {
   width: 100%;
@@ -1059,5 +1061,22 @@ body {
 
   .checkout-total-address span {
     font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .checkout-total-form {
+    width: 10%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 25%;
+  }
+  .product-size-select {
+    width: 100%;
+  }
+
+  .header-container .header-left-container {
+    gap: 60px;
   }
 }

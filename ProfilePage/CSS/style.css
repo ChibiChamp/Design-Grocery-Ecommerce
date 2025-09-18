@@ -5,12 +5,13 @@
 }
 
 body {
-  width: 100%;
+  width: 1200px;
   height: auto;
   font-family: "Gordita", sans-serif;
   background-color: #f5f5f5;
   color: #333;
   line-height: 1.6;
+  overscroll-behavior: none;
 }
 
 .profile-main {
@@ -875,5 +876,29 @@ form .form-actions .save-card-btn:hover {
     height: 10%;
     object-fit: contain;
     border-radius: 10px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .profile-header .header-content a img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  .profile-header .header-content .add-new-card-btn {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  .body-content .body-content-item {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
   }
 }
