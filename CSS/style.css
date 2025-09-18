@@ -194,7 +194,7 @@ body {
 
 .header-container .nav .nav-list .nav-item a:hover {
   color: #007bff;
-  background-color: rgba(0, 123, 255, 0.1);
+  /* background-color: rgba(0, 123, 255, 0.1); */
   transform: translateY(-2px);
 }
 
